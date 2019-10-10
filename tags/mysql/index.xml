@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MySQL on 栖迟于一丘</title>
+    <link>http://yulingqiu.github.io/tags/mysql/</link>
+    <description>Recent content in MySQL on 栖迟于一丘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 10 Oct 2019 19:29:56 +0800</lastBuildDate>
+    
+	<atom:link href="http://yulingqiu.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MySQL入门</title>
+      <link>http://yulingqiu.github.io/post/mysql%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Thu, 10 Oct 2019 19:29:56 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql%E5%85%A5%E9%97%A8/</guid>
+      <description>一、基本概念 1、数据库的好处： 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念： DB(</description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>http://yulingqiu.github.io/post/mysql/</link>
+      <pubDate>Thu, 10 Oct 2019 18:54:56 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql/</guid>
+      <description>一、基本概念 1、数据库的好处： 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念： DB(</description>
+    </item>
+    
+  </channel>
+</rss>
