@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 栖迟于一丘</title>
-    <link>http://yulingqiu.github.io/post/</link>
-    <description>Recent content in Posts on 栖迟于一丘</description>
+    <title>Python on 栖迟于一丘</title>
+    <link>http://yulingqiu.github.io/tags/python/</link>
+    <description>Recent content in Python on 栖迟于一丘</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 11 Oct 2019 12:51:10 +0800</lastBuildDate>
     
-	<atom:link href="http://yulingqiu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://yulingqiu.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>http://yulingqiu.github.io/post/python00%E5%9F%BA%E7%A1%80/</guid>
       <description>数据类型和变量 数据类型 Python中，能够直接处理的数据类型有：整数、浮点数、字符串、布尔值、空值 Python的整数没有大小限制（某些语言的</description>
-    </item>
-    
-    <item>
-      <title>MySQL入门</title>
-      <link>http://yulingqiu.github.io/post/mysql%E5%85%A5%E9%97%A8/</link>
-      <pubDate>Thu, 10 Oct 2019 19:29:56 +0800</pubDate>
-      
-      <guid>http://yulingqiu.github.io/post/mysql%E5%85%A5%E9%97%A8/</guid>
-      <description>一、基本概念 1、数据库的好处： 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念： DB(</description>
     </item>
     
   </channel>
