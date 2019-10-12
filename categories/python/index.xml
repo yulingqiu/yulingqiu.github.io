@@ -5,18 +5,36 @@
     <link>http://yulingqiu.github.io/categories/python/</link>
     <description>Recent content in Python on 栖迟于一丘</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 11 Oct 2019 12:51:10 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 12 Oct 2019 13:08:30 +0800</lastBuildDate>
     
 	<atom:link href="http://yulingqiu.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Python02高级特性</title>
+      <link>http://yulingqiu.github.io/post/python-notes-02/</link>
+      <pubDate>Sat, 12 Oct 2019 13:08:30 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/python-notes-02/</guid>
+      <description>去除字符串首尾的空格 1 2 3 4 5 6 7 8 9 10 11 def trim(s): if s[:1] != &amp;#39; &amp;#39;: #当字符串开头没有空格后，开始判断结尾是否为空格 if s[-1:] != &amp;#39; &amp;#39;: return s else: return trim(s[:-1]) else: #先对字符串开</description>
+    </item>
+    
+    <item>
+      <title>Python01函数</title>
+      <link>http://yulingqiu.github.io/post/python-notes-01/</link>
+      <pubDate>Sat, 12 Oct 2019 13:04:28 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/python-notes-01/</guid>
+      <description>函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。 函数能提高应用的模块性，和代码的重复利用率。Python提供了许多内建函数</description>
+    </item>
+    
+    <item>
       <title>Python00基础</title>
-      <link>http://yulingqiu.github.io/post/python00%E5%9F%BA%E7%A1%80/</link>
+      <link>http://yulingqiu.github.io/post/python-notes-00/</link>
       <pubDate>Fri, 11 Oct 2019 12:51:10 +0800</pubDate>
       
-      <guid>http://yulingqiu.github.io/post/python00%E5%9F%BA%E7%A1%80/</guid>
-      <description>数据类型和变量 数据类型 Python中，能够直接处理的数据类型有：整数、浮点数、字符串、布尔值、空值 Python的整数没有大小限制（某些语言的</description>
+      <guid>http://yulingqiu.github.io/post/python-notes-00/</guid>
+      <description>数据类型和变量 数据类型 Python基本的数据类型有：整数、浮点数、字符串、布尔值、空值。 Python的整数没有大小限制 浮点数（也就是小数，之</description>
     </item>
     
   </channel>

@@ -12,10 +12,10 @@
     
     <item>
       <title>MySQL入门</title>
-      <link>http://yulingqiu.github.io/post/mysql%E5%85%A5%E9%97%A8/</link>
+      <link>http://yulingqiu.github.io/post/mysql-notes/</link>
       <pubDate>Thu, 10 Oct 2019 19:29:56 +0800</pubDate>
       
-      <guid>http://yulingqiu.github.io/post/mysql%E5%85%A5%E9%97%A8/</guid>
+      <guid>http://yulingqiu.github.io/post/mysql-notes/</guid>
       <description>一、基本概念 1、数据库的好处： 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念： DB(</description>
     </item>
     
