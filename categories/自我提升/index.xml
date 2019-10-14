@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>自我提升 on 栖迟于一丘</title>
+    <link>http://yulingqiu.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/</link>
+    <description>Recent content in 自我提升 on 栖迟于一丘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 14 Oct 2019 18:13:22 +0800</lastBuildDate>
+    
+	<atom:link href="http://yulingqiu.github.io/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何提问</title>
+      <link>http://yulingqiu.github.io/post/how_to_ask/</link>
+      <pubDate>Mon, 14 Oct 2019 18:13:22 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/how_to_ask/</guid>
+      <description>为什么要学会提问？ 我们在日常的工作和学习中，难免会遇到不懂不理解的问题，这时候我们就会向其他人（上司，领导，同事，社群成员）提问，但是我们在</description>
+    </item>
+    
+  </channel>
+</rss>

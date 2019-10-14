@@ -5,10 +5,19 @@
     <link>http://yulingqiu.github.io/post/</link>
     <description>Recent content in Posts on 栖迟于一丘</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 12 Oct 2019 13:08:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 Oct 2019 18:13:22 +0800</lastBuildDate>
     
 	<atom:link href="http://yulingqiu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何提问</title>
+      <link>http://yulingqiu.github.io/post/how_to_ask/</link>
+      <pubDate>Mon, 14 Oct 2019 18:13:22 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/how_to_ask/</guid>
+      <description>为什么要学会提问？ 我们在日常的工作和学习中，难免会遇到不懂不理解的问题，这时候我们就会向其他人（上司，领导，同事，社群成员）提问，但是我们在</description>
+    </item>
     
     <item>
       <title>Python02高级特性</title>
