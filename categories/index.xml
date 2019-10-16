@@ -5,10 +5,19 @@
     <link>http://yulingqiu.github.io/categories/</link>
     <description>Recent content in Categories on 栖迟于一丘</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 14 Oct 2019 18:13:22 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2019 22:35:00 +0800</lastBuildDate>
     
 	<atom:link href="http://yulingqiu.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MySQL</title>
+      <link>http://yulingqiu.github.io/categories/mysql/</link>
+      <pubDate>Wed, 16 Oct 2019 22:35:00 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/categories/mysql/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>职场</title>
@@ -34,15 +43,6 @@
       <pubDate>Sat, 12 Oct 2019 13:08:30 +0800</pubDate>
       
       <guid>http://yulingqiu.github.io/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MySQL</title>
-      <link>http://yulingqiu.github.io/categories/mysql/</link>
-      <pubDate>Thu, 10 Oct 2019 19:29:56 +0800</pubDate>
-      
-      <guid>http://yulingqiu.github.io/categories/mysql/</guid>
       <description></description>
     </item>
     

@@ -5,10 +5,19 @@
     <link>http://yulingqiu.github.io/post/</link>
     <description>Recent content in Posts on 栖迟于一丘</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 14 Oct 2019 18:13:22 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2019 22:35:00 +0800</lastBuildDate>
     
 	<atom:link href="http://yulingqiu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>牛客网-MySQL实战</title>
+      <link>http://yulingqiu.github.io/post/mysql_exercises/</link>
+      <pubDate>Wed, 16 Oct 2019 22:35:00 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_exercises/</guid>
+      <description>1、查找最晚入职员工的所有信息 1 2 3 4 5 6 7 8 CREATE TABLE employees ( emp_no int(11) NOT NULL, birth_date date NOT NULL, first_name varchar(14) NOT NULL, last_name varchar(16) NOT NULL, gender char(1) NOT NULL, hire_date date NOT NULL, PRIMARY KEY (emp_no)); 1 2 3 4 5 6 SELECT * FROM employees WHERE hire_date = ( SELECT MAX(hire_date)</description>
+    </item>
     
     <item>
       <title>如何提问</title>
