@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据分析 on 栖迟于一丘</title>
+    <link>http://yulingqiu.github.io/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</link>
+    <description>Recent content in 数据分析 on 栖迟于一丘</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Oct 2019 15:42:34 +0800</lastBuildDate>
+    
+	<atom:link href="http://yulingqiu.github.io/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>数据分析流程及常用方法</title>
+      <link>http://yulingqiu.github.io/post/data_analysis_methods/</link>
+      <pubDate>Thu, 17 Oct 2019 15:42:34 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/data_analysis_methods/</guid>
+      <description>决定用写文章的方式来梳理自己数据分析的体系，这是系列文章的第一篇：《数据分析流程及常用方法》 数据分析的流程 数据分析闭环的流程为： 1 2 3 4 5 6</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>栖迟于一丘</title>
+  <title>数据分析流程及常用方法 - 栖迟于一丘</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="版权所有，转载请注明出处。工作请联系qiuyuling98@163.com" />
-  <meta name="description" content="Get up and get going!" />
+  <meta name="description" content="决定用写文章的方式来梳理自己数据分析的体系，这是系列文章的第一篇：《数据分析流程及常用方法》 数据分析的流程 数据分析闭环的流程为： 1 2 3 4 5 6" />
+
   <meta name="keywords" content="数据分析, Python, Office, 博客, 笔记" />
 
 
@@ -34,8 +35,8 @@
 <meta name="generator" content="Hugo 0.58.3" />
 
 
-<link rel="canonical" href="http://yulingqiu.github.io/" />
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="栖迟于一丘" />
+<link rel="canonical" href="http://yulingqiu.github.io/post/data_analysis_methods/" />
+
 
 
 
@@ -60,18 +61,26 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="栖迟于一丘" />
-<meta property="og:description" content="Get up and get going!" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://yulingqiu.github.io/" />
+<meta property="og:title" content="数据分析流程及常用方法" />
+<meta property="og:description" content="决定用写文章的方式来梳理自己数据分析的体系，这是系列文章的第一篇：《数据分析流程及常用方法》 数据分析的流程 数据分析闭环的流程为： 1 2 3 4 5 6" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://yulingqiu.github.io/post/data_analysis_methods/" />
+<meta property="article:published_time" content="2019-10-17T15:42:34+08:00" />
+<meta property="article:modified_time" content="2019-10-17T15:42:34+08:00" />
+<meta itemprop="name" content="数据分析流程及常用方法">
+<meta itemprop="description" content="决定用写文章的方式来梳理自己数据分析的体系，这是系列文章的第一篇：《数据分析流程及常用方法》 数据分析的流程 数据分析闭环的流程为： 1 2 3 4 5 6">
 
-<meta property="og:updated_time" content="2019-10-17T15:42:34+08:00" />
-<meta itemprop="name" content="栖迟于一丘">
-<meta itemprop="description" content="Get up and get going!">
 
+<meta itemprop="datePublished" content="2019-10-17T15:42:34&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-17T15:42:34&#43;08:00" />
+<meta itemprop="wordCount" content="3007">
+
+
+
+<meta itemprop="keywords" content="数据分析,笔记," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="栖迟于一丘"/>
-<meta name="twitter:description" content="Get up and get going!"/>
+<meta name="twitter:title" content="数据分析流程及常用方法"/>
+<meta name="twitter:description" content="决定用写文章的方式来梳理自己数据分析的体系，这是系列文章的第一篇：《数据分析流程及常用方法》 数据分析的流程 数据分析闭环的流程为： 1 2 3 4 5 6"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -219,7 +228,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -288,179 +297,365 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="posts" class="posts">
-  
-  
+          <article class="post bg-white">
     
-  
-  
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
+    <header class="post-header">
+      <h1 class="post-title">数据分析流程及常用方法</h1>
       
-      <a class="post-link" href="/post/python-notes-01/">Python01函数</a>
-    </h1>
+      <div class="post-meta">
+        <time datetime="2019-10-17" class="post-time">
+          2019-10-17
+        </time>
+        <div class="post-category">
+            <a href="http://yulingqiu.github.io/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"> 数据分析 </a>
+            
+          </div>
+        <span class="more-meta"> 约 3007 字 </span>
+          <span class="more-meta"> 预计阅读 7 分钟 </span>
+
+        
+        
+
+        
+        
+          <span id="/post/data_analysis_methods/" class="leancloud_visitors" data-flag-title="数据分析流程及常用方法">
+            <span class="post-meta-item-text"> | 阅读 </span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+      </div>
+    </header>
+
     
-    <div class="post-meta">
-      <time datetime="2019-10-12" class="post-time">
-        2019-10-12
-      </time>
-      <div class="post-category">
-          <a href="http://yulingqiu.github.io/categories/python/"> Python </a>
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#数据分析的流程">数据分析的流程</a></li>
+<li><a href="#数据分析方法">数据分析方法</a>
+<ul>
+<li><a href="#一-金字塔原理">一、金字塔原理</a>
+<ul>
+<li><a href="#1-定义">1、定义</a></li>
+<li><a href="#2-适用场景">2、适用场景</a></li>
+</ul></li>
+<li><a href="#二-描述分析">二、描述分析</a>
+<ul>
+<li><a href="#1-定义-1">1、定义</a></li>
+<li><a href="#2-常用统计指标">2、常用统计指标</a></li>
+<li><a href="#3-拓展">3、拓展</a></li>
+</ul></li>
+<li><a href="#三-对比分析">三、对比分析</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<p>决定用写文章的方式来梳理自己数据分析的体系，这是系列文章的第一篇：《数据分析流程及常用方法》</p>
+
+<h2 id="数据分析的流程">数据分析的流程</h2>
+
+<p>数据分析闭环的流程为：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mermaid" data-lang="mermaid"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mermaid" data-lang="mermaid">graph LR
+A[明确需求] --&gt;B[确定思路]
+    B --&gt;C[处理数据]
+    C --&gt;D[分析数据]
+    D --&gt;E[展示数据]
+    E --&gt;F[撰写报告]
+    F --&gt;G[效果反馈]
+    G --&gt;A</code></pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li><p>明确需求</p>
+
+<ul>
+<li>明确分析目的（是“拉新”还是“促活”）、分析目标（是新用户还是老用户）、分析口径（比如新用户是指19年10月注册的用户还是19年9月下载的用户）、分析思路、完成时间。</li>
+</ul></li>
+
+<li><p>确定思路</p>
+
+<ul>
+<li>从分析目的出发，整理需求人思路，请教同事头脑风暴，学习历史资料</li>
+</ul></li>
+
+<li><p>处理数据</p>
+
+<ul>
+<li>数据来源分为内部来源（数据库、现有报表）和外部来源（爬虫、调查问卷、公开数据集等）</li>
+<li>对数据的处理包括：收集数据、数据清洗（空值、异常值、重复值、不同来源数据的整合 ==&gt; 可以考虑用合理值比如平均值、中位数、众数代替）、数据计算（均值等）、数据转化（转化成分类数据，标签化数据）</li>
+</ul></li>
+
+<li><p>分析数据</p>
+
+<ul>
+<li>下文将介绍常用分析方法。</li>
+<li>常用的分析工具有：Excel、SQL、Python、R、SASS等</li>
+</ul></li>
+
+<li><p>展示数据</p>
+
+<ul>
+<li>用简单直接的方式传达数据包含的信息，增加数据的易读性。</li>
+<li>常用的数据图表有：表格、柱状图、折线图、散点图、条形图、饼图、拓扑图等。</li>
+<li>常用的工具有：Power BI、Tableau等。</li>
+</ul></li>
+
+<li><p>撰写报告</p>
+
+<ul>
+<li>以文档形式输出，通过数据全方位地科学分析，为决策提供强有力的依据，从而降低决策风险，增加盈利。</li>
+
+<li><p>常见的报告形式有:PPT、Word、Excel或一些可视化报表。</p></li>
+
+<li><p>注意：报告中要注明分析目标、分析口径、数据来源；报告要体现<strong>结论</strong>、<strong>建议</strong>。</p></li>
+</ul></li>
+
+<li><p>效果反馈</p>
+
+<ul>
+<li>选择恰当且有代表性的指标，及时监控报告中提出的策略执行进度、执行效果等情况。</li>
+<li>反馈的形式有：监控报表（日报、周报）、分析报告（月报、年报）</li>
+</ul></li>
+</ol>
+
+<h2 id="数据分析方法">数据分析方法</h2>
+
+<p>常用的数据分析方法有：金字塔原理、描述分析、对比分析、分类分析、结构分析、相关分析、预测分析。</p>
+
+<h3 id="一-金字塔原理">一、金字塔原理</h3>
+
+<h4 id="1-定义">1、定义</h4>
+
+<p>用四个字来概括金字塔原理——<strong>结论先行</strong>，再具体一些就是：结论先行，以下统上，归类分组，逻辑递进。意思就是说<strong>先说结论，再进行分点分类递进式论证</strong>。</p>
+
+<p>金字塔原则就是：任何事情都可以归纳出一个中心论点，而此中心论点可由三至七个论据支持，这些一级论据本身也可以是个论点，被二级的三至七个论据支持，如此延伸，状如金字塔。对于金字塔每一层的支持论据，要符合一个原则：MECE原则（Mutually exclusive and collectively exhaustive），即<strong>彼此独立，完全穷尽</strong>。不遗漏才能不误事，不重叠才能不做无用功。</p>
+
+<h4 id="2-适用场景">2、适用场景</h4>
+
+<ol>
+<li>尝试解决问题时
+
+<ul>
+<li>应该从下到上，收集论据，归纳出中心思想，从而建造成坚实的金字塔。有了这个大致的目标，问题解决起来最有效。</li>
+</ul></li>
+<li>安排下属解决问题
+
+<ul>
+<li>对于某个问题，领导可以根据经验提出假设，迅速列出第一级三至七个支持论据，分别交待给不同的手下。两周后，手下提交报告，领导进行汇总排列，从而建造成坚实的金字塔。有了这个原则，管理起来最有效，领导做得最轻松。</li>
+</ul></li>
+<li>问题解决后的汇报、交流
+
+<ul>
+<li>需要交流的时候，应该从上到下，从金字塔尖向领导/上级汇报。当你在电梯里遇到领导，给你三十秒，你只汇报中心论点和一级支持论据，领导明白了，事情办成了。有了这个原则，交流起来最有效。</li>
+</ul></li>
+</ol>
+
+<p>金字塔思维可以通过养成绘制思维导图习惯、分类归纳日常事务、总结文章重点、用最少的文字清晰表达自己的方式来训练培养。</p>
+
+<p>当进行一项分析工作的时候，采用倒金字塔结构，自下而上的思考，采用步骤顺序、空间顺序、重要性顺序、演绎顺序的逻辑进行分析；当总结汇报工作的时候，采用正金字塔结构，先说结论，提高工作交流的效率。</p>
+
+<h3 id="二-描述分析">二、描述分析</h3>
+
+<h4 id="1-定义-1">1、定义</h4>
+
+<p>描述分析（即描述性统计分析）：是用来概况数据整体状况以及数据各特征的统计方法。</p>
+
+<p>描述的内容分为集中趋势（均值、中位数、众数、四分位数）、离散程度（方差、标准差、极差、四分位差、变异系数CV = 标准差/平均数的绝对值）、分布形态（偏度、峰度）。</p>
+
+<p>通常我们拿到一份数据集，首先要对获取的数据进行清洗，整理成我们业务所需要的新数据。</p>
+
+<ol>
+<li><p>缺失值填充：常用方法：剔除法、均值法、最小邻居法、比率回归法、决策树法。</p></li>
+
+<li><p>正态性检验：很多统计方法都要求数值服从或近似服从正态分布，所以之前需要进行正态性检验。常用方法：非参数检验的K-量检验、P-P图、Q-Q图、W检验、动差法。</p></li>
+</ol>
+
+<p>然后再对新数据进行描述性统计分析，常用的是Excel 中自带的分析分析工具（描述性统计分析），Excel加载后即可使用。</p>
+
+<p><img src="../../static/image/excel_data.png" style="zoom:50%;" /></p>
+
+<p><img src="../../static/image/excel_data2.png" style="zoom:50%;" /></p>
+
+<h4 id="2-常用统计指标">2、常用统计指标</h4>
+
+<ol>
+<li>均值：均值容易受极值的影响，当数据集中出现极值时，所得到的的均值结果将会出现较大的偏差。</li>
+<li>中位数：数据按照从小到大的顺序排列时，最中间的数据即为中位数。当数据个数为奇数时，中位数即最中间的数，如果有N个数，则中间数的位置为(N+1)/2；当数据个数为偶数时，中位数为中间两个数的平均值，中间位置的算法是(N+1)/2。中位数不受极值影响，因此对极值缺乏敏感性。</li>
+<li>众数：数据中出现次数最多的数字，即频数最大的数值。众数可能不止一个，众数不仅能用于数值型数据，还可用于非数值型数据，不受极值影响。</li>
+<li>极差 = 最大值 - 最小值，是描述数据分散程度的量，极差描述了数据的范围，但无法描述其分布状态。且对异常值敏感，异常值的出现使得数据集的极差有很强的误导性。</li>
+<li>四分位数：数据从小到大排列并分成四等份，处于三个分割点位置的数值，即为四分位数，四分位数分为上四分位数（数据从小到大排列排在第75%的数字，即最大的四分位数）、下四分位数（数据从小到大排列排在第25%位置的数字，即最小的四分位数）、中间的四分位数即为中位数。四分位数可以很容易地识别异常值。（一般通过箱线图表示数据更直观）</li>
+<li>标准差（Standard Deviation） ，也称均方差（mean square error），是各数据偏离平均数的距离的平均数，它是离均差平方和平均后的方根，用σ表示。标准差是方差的算术平方根。标准差能反映一个数据集的离散程度。标准差越大，波动越大，平均数相同的，标准差未必相同。标准差可以反映平均数不能反映出的东西（比如稳定度等）。
+
+<ul>
+<li>Excel中有STDEV、STDEVP; STDEVA,STDEVPA四个函数，分别表示样本标准差、总体标准差；包含逻辑值运算的样本标准差、包含逻辑值运算的总体标准差。</li>
+</ul></li>
+</ol>
+
+<p>描述性统计分析是属于统计学中比较小的一个理论知识，但是在日常的数据分析中，能够快速地让我们对一份数据进行了解，并能够通过科学的图表展示，发现数据规律，进行未知数据的预测。</p>
+
+<h4 id="3-拓展">3、拓展</h4>
+
+<p>环比与同比：</p>
+
+<ul>
+<li>环比（环比增长率） = （本期数 - 上期数）/ 上期数 * 100%       ==&gt;可用于监控发展趋势</li>
+<li>同比（同比增长率） = （本期数 - 上一同期数） / 上一同期数 * 100%      ==&gt;可用于监控周期性发展变化</li>
+</ul>
+
+<p>标准化与归一化（消除量纲影响）：</p>
+
+<ul>
+<li>标准化：x* = (x- x的平均值)/σ，应用于数据不稳定，存在异常值和噪音，不符合正态分布的数据，结果将得到一组均值为0，标准差为1，呈正态分布的一组数据。</li>
+<li>归一化：x* = (x - min) / (max - min)，应用于数据稳定，不存在极端值，符号正态分布的数据，结果是得到一组范围在[0, 1]的数据</li>
+</ul>
+
+<h3 id="三-对比分析">三、对比分析</h3>
+
+<p>待更新……</p>
+
+<p>方法论这些来源于不限于《金字塔原理》、知乎上有关数据分析的回答，网易云课堂上的课程等，本文仅为本人对所学知识的整理与归纳，可能会不小心引用我也记不清是哪儿来的话，如有侵权，请联系我删改，在此谢谢所有知识分享者。</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">版权所有，转载请注明出处。工作请联系qiuyuling98@163.com</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2019-10-17
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content">原创文章，如需转载请注明文章作者和出处。谢谢！</span>
+  </p>
+</div>
+
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/reward_wechat.png">
+        <span>微信打赏</span>
+      </label>
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/reward_alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://yulingqiu.github.io/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">数据分析</a>
+          <a href="http://yulingqiu.github.io/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
           
         </div>
-      <span class="more-meta"> 约 4071 字 </span>
-      <span class="more-meta"> 预计阅读 9 分钟 </span>
+
       
-      
-      
-        <span id="/post/python-notes-01/" class="leancloud_visitors" data-flag-title="Python01函数">
-          <span class="post-meta-item-text"> | 阅读 </span>
-          <span class="leancloud-visitors-count"></span>
-        </span>
-      
-    </div>
-  </header>
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/mysql_exercises/">
+            <span class="next-text nav-default">牛客网-MySQL实战</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
   
-  <div class="post-content">
-    
-    <div class="post-summary">
-      函数是组织好的，可重复使用的，用来实现单一，或相关联功能的代码段。 函数能提高应用的模块性，和代码的重复利用率。Python提供了许多内建函数
-    </div>
-    <div class="read-more">
-      <a href="/post/python-notes-01/" class="read-more-link">阅读全文</a>
-    </div>
-    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  <div class="disqus-comment">
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+    显示 Disqus 评论
   </div>
-</article>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "http://yulingqiu.github.io/post/data_analysis_methods/";
+    };
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
 
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'yuling';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/python-notes-00/">Python00基础</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-10-11" class="post-time">
-        2019-10-11
-      </time>
-      <div class="post-category">
-          <a href="http://yulingqiu.github.io/categories/python/"> Python </a>
-          
-        </div>
-      <span class="more-meta"> 约 7488 字 </span>
-      <span class="more-meta"> 预计阅读 15 分钟 </span>
-      
-      
-      
-        <span id="/post/python-notes-00/" class="leancloud_visitors" data-flag-title="Python00基础">
-          <span class="post-meta-item-text"> | 阅读 </span>
-          <span class="leancloud-visitors-count"></span>
-        </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      数据类型和变量 数据类型 Python基本的数据类型有：整数、浮点数、字符串、布尔值、空值。 Python的整数没有大小限制 浮点数（也就是小数，之
-    </div>
-    <div class="read-more">
-      <a href="/post/python-notes-00/" class="read-more-link">阅读全文</a>
-    </div>
-    
   </div>
-</article>
 
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/mysql-notes/">MySQL入门</a>
-    </h1>
     
-    <div class="post-meta">
-      <time datetime="2019-10-10" class="post-time">
-        2019-10-10
-      </time>
-      <div class="post-category">
-          <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
-          
-        </div>
-      <span class="more-meta"> 约 23642 字 </span>
-      <span class="more-meta"> 预计阅读 48 分钟 </span>
-      
-      
-      
-        <span id="/post/mysql-notes/" class="leancloud_visitors" data-flag-title="MySQL入门">
-          <span class="post-meta-item-text"> | 阅读 </span>
-          <span class="leancloud-visitors-count"></span>
-        </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      一、基本概念 1、数据库的好处： 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念： DB(
-    </div>
-    <div class="read-more">
-      <a href="/post/mysql-notes/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
 
   
-</section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
-      
-      <li >
-        <a href="/">1</a>
-      </li>
-      
-      <li  class="active" >
-        <a href="/page/2/">2</a>
-      </li>
-      
-    </ul>
-  </nav>
-
-  
-  
-
-
-
-
 
         </div>
       </div>
