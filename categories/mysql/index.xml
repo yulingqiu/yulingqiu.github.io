@@ -5,10 +5,19 @@
     <link>http://yulingqiu.github.io/categories/mysql/</link>
     <description>Recent content in MySQL on 栖迟于一丘</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 16 Oct 2019 22:35:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 25 Oct 2019 17:22:04 +0800</lastBuildDate>
     
 	<atom:link href="http://yulingqiu.github.io/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MySQL公司员工分析</title>
+      <link>http://yulingqiu.github.io/post/mysql_excel/</link>
+      <pubDate>Fri, 25 Oct 2019 17:22:04 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_excel/</guid>
+      <description>一、分析目的 通过数据，分析企业员工结构，工资变化，以便了解公司的内部情况，改善企业管理方式。 二、 数据来源及数据字段定义 数据来源：employ</description>
+    </item>
     
     <item>
       <title>牛客网-MySQL实战</title>

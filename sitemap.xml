@@ -3,21 +3,56 @@
   
   <url>
     <loc>http://yulingqiu.github.io/categories/</loc>
-    <lastmod>2019-10-19T20:33:47+08:00</lastmod>
+    <lastmod>2019-10-25T17:22:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://yulingqiu.github.io/categories/mysql/</loc>
+    <lastmod>2019-10-25T17:22:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://yulingqiu.github.io/tags/mysql/</loc>
+    <lastmod>2019-10-25T17:22:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://yulingqiu.github.io/post/mysql_excel/</loc>
+    <lastmod>2019-10-25T17:22:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://yulingqiu.github.io/post/</loc>
-    <lastmod>2019-10-19T20:33:47+08:00</lastmod>
+    <lastmod>2019-10-25T17:22:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://yulingqiu.github.io/tags/</loc>
-    <lastmod>2019-10-19T20:33:47+08:00</lastmod>
+    <lastmod>2019-10-25T17:22:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://yulingqiu.github.io/</loc>
+    <lastmod>2019-10-25T17:22:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://yulingqiu.github.io/tags/%E9%A1%B9%E7%9B%AE/</loc>
+    <lastmod>2019-10-25T17:22:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44,13 +79,6 @@
   </url>
   
   <url>
-    <loc>http://yulingqiu.github.io/</loc>
-    <lastmod>2019-10-19T20:33:47+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://yulingqiu.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2019-10-19T20:33:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -60,20 +88,6 @@
   <url>
     <loc>http://yulingqiu.github.io/post/data_analysis_methods/</loc>
     <lastmod>2019-10-17T15:42:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://yulingqiu.github.io/tags/mysql/</loc>
-    <lastmod>2019-10-16T22:35:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://yulingqiu.github.io/categories/mysql/</loc>
-    <lastmod>2019-10-16T22:35:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -93,14 +107,14 @@
   </url>
   
   <url>
-    <loc>http://yulingqiu.github.io/tags/%E8%81%8C%E5%9C%BA/</loc>
+    <loc>http://yulingqiu.github.io/categories/%E8%81%8C%E5%9C%BA/</loc>
     <lastmod>2019-10-14T18:13:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://yulingqiu.github.io/categories/%E8%81%8C%E5%9C%BA/</loc>
+    <loc>http://yulingqiu.github.io/tags/%E8%81%8C%E5%9C%BA/</loc>
     <lastmod>2019-10-14T18:13:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
