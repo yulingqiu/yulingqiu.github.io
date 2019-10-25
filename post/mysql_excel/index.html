@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>MySQL公司员工分析 - 栖迟于一丘</title>
+  <title>MySQL公司员工分析过程 - 栖迟于一丘</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -61,25 +61,25 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="MySQL公司员工分析" />
+<meta property="og:title" content="MySQL公司员工分析过程" />
 <meta property="og:description" content="一、分析目的 通过数据，分析企业员工结构，工资变化，以便了解公司的内部情况，改善企业管理方式。 二、 数据来源及数据字段定义 数据来源：employ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://yulingqiu.github.io/post/mysql_excel/" />
 <meta property="article:published_time" content="2019-10-25T17:22:04+08:00" />
 <meta property="article:modified_time" content="2019-10-25T17:22:04+08:00" />
-<meta itemprop="name" content="MySQL公司员工分析">
+<meta itemprop="name" content="MySQL公司员工分析过程">
 <meta itemprop="description" content="一、分析目的 通过数据，分析企业员工结构，工资变化，以便了解公司的内部情况，改善企业管理方式。 二、 数据来源及数据字段定义 数据来源：employ">
 
 
 <meta itemprop="datePublished" content="2019-10-25T17:22:04&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-25T17:22:04&#43;08:00" />
-<meta itemprop="wordCount" content="842">
+<meta itemprop="wordCount" content="1390">
 
 
 
 <meta itemprop="keywords" content="MySQL,项目," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MySQL公司员工分析"/>
+<meta name="twitter:title" content="MySQL公司员工分析过程"/>
 <meta name="twitter:description" content="一、分析目的 通过数据，分析企业员工结构，工资变化，以便了解公司的内部情况，改善企业管理方式。 二、 数据来源及数据字段定义 数据来源：employ"/>
 
 <!--[if lte IE 9]>
@@ -300,7 +300,7 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">MySQL公司员工分析</h1>
+      <h1 class="post-title">MySQL公司员工分析过程</h1>
       
       <div class="post-meta">
         <time datetime="2019-10-25" class="post-time">
@@ -310,15 +310,15 @@
             <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
             
           </div>
-        <span class="more-meta"> 约 842 字 </span>
-          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        <span class="more-meta"> 约 1390 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
 
         
         
 
         
         
-          <span id="/post/mysql_excel/" class="leancloud_visitors" data-flag-title="MySQL公司员工分析">
+          <span id="/post/mysql_excel/" class="leancloud_visitors" data-flag-title="MySQL公司员工分析过程">
             <span class="post-meta-item-text"> | 阅读 </span>
             <span class="leancloud-visitors-count"></span>
           </span>
@@ -341,6 +341,9 @@
 <li><a href="#四-数据分析">四、 数据分析</a>
 <ul>
 <li><a href="#4-1-公司发展趋势分析">4.1 公司发展趋势分析</a></li>
+<li><a href="#4-2-公司员工价值观">4.2 公司员工价值观</a></li>
+<li><a href="#4-3-年薪增长率">4.3 年薪增长率</a></li>
+<li><a href="#4-4-各部门员工分布">4.4 各部门员工分布</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -354,7 +357,7 @@
 
 <h2 id="一-分析目的">一、分析目的</h2>
 
-<p>通过数据，分析企业员工结构，<strong>工资变化</strong>，以便了解公司的内部情况，改善企业管理方式。</p>
+<p>通过数据，分析企业员工结构，工资变化，以便了解公司的内部情况，改善企业管理方式。</p>
 
 <h2 id="二-数据来源及数据字段定义">二、 数据来源及数据字段定义</h2>
 
@@ -447,7 +450,7 @@
 
 <p>将查询结果导入Excel分析：</p>
 
-<p><img src="../../公司各年平均工资.png" alt="" /></p>
+<p><img src="../../image/公司各年平均工资.png" alt="" /></p>
 
 <ul>
 <li><p>公司各年入职和离职数量</p>
@@ -504,9 +507,152 @@
 
 <p>然后放入Excel中分析可得：</p>
 
-<p><img src="../../公司各年入职离职.png" alt="" /></p>
+<p><img src="../../image/公司各年入职离职.png" alt="" /></p>
 
-<p>即公司每年公司各年工资支出、平均工资呈线性递增；  公司各年入职和离职数量情况是入大于出，但离职率在逐年递增。</p>
+<p>得出结论：公司每年公司各年工资支出、平均工资呈线性递增；  公司各年入职和离职数量情况是入大于出，但离职率在逐年递增。</p>
+
+<h3 id="4-2-公司员工价值观">4.2 公司员工价值观</h3>
+
+<p>可以进行员工性别年龄的交叉分析：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">SELECT</span> <span class="n">gender</span><span class="p">,</span> <span class="nf">ROUND</span><span class="p">((</span><span class="nf">TO_DAYS</span><span class="p">(</span><span class="s1">&#39;2002-08-01&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="nf">TO_DAYS</span><span class="p">(</span><span class="n">birth_date</span><span class="p">))</span><span class="o">/</span><span class="mi">365</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>  <span class="k">AS</span> <span class="n">ages</span><span class="p">,</span>
+<span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">FROM</span><span class="p">(</span>
+    <span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span> <span class="n">birth_date</span><span class="p">,</span> <span class="n">gender</span>
+    <span class="k">FROM</span> <span class="n">employees</span>
+<span class="p">)</span> <span class="n">t1</span>
+<span class="k">JOIN</span><span class="p">(</span>
+    <span class="k">SELECT</span> <span class="n">emp_no</span> <span class="k">FROM</span> <span class="n">titles</span> <span class="k">WHERE</span> <span class="n">TO_DATE</span><span class="o">=</span><span class="s1">&#39;9999-01-01&#39;</span>
+<span class="p">)</span> <span class="n">t2</span> 
+<span class="k">ON</span> <span class="n">t1</span><span class="p">.</span><span class="n">emp_no</span> <span class="o">=</span> <span class="n">t2</span><span class="p">.</span><span class="n">emp_no</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">gender</span><span class="p">,</span> <span class="nf">ROUND</span><span class="p">((</span><span class="nf">TO_DAYS</span><span class="p">(</span><span class="s1">&#39;2002-08-01&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="nf">TO_DAYS</span><span class="p">(</span><span class="n">birth_date</span><span class="p">))</span><span class="o">/</span><span class="mi">365</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<p><img src="../../image/员工性别年龄交叉分析.png" alt="" /></p>
+
+<p>得出结论：公司男员工数量明显多于女员工，且公司员工的年龄位于38-50岁之间，各年龄分布均匀，没有太大差别。</p>
+
+<h3 id="4-3-年薪增长率">4.3 年薪增长率</h3>
+
+<p>可以分析全公司总体每年的平均收入增长及岗位有升迁的员工平均收入增长：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1">#总体每年收入增长
+</span><span class="c1"></span><span class="k">SELECT</span> <span class="nf">ROUND</span><span class="p">((</span><span class="n">max</span><span class="o">-</span><span class="n">min</span><span class="p">)</span><span class="o">/</span><span class="n">min</span><span class="o">/</span><span class="p">(</span><span class="n">years</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">increaceByYear</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">num</span>
+<span class="k">FROM</span><span class="p">(</span>
+    <span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">years</span><span class="p">,</span> <span class="nf">MAX</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">as</span> <span class="n">max</span><span class="p">,</span> <span class="nf">MIN</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">as</span> <span class="n">min</span>
+<span class="k">FROM</span> <span class="n">salaries</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">emp_no</span>
+<span class="k">HAVING</span> <span class="n">years</span> <span class="o">&gt;</span> <span class="mi">1</span>
+<span class="p">)</span> <span class="n">tt</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="nf">ROUND</span><span class="p">((</span><span class="n">max</span><span class="o">-</span><span class="n">min</span><span class="p">)</span><span class="o">/</span><span class="n">min</span><span class="o">/</span><span class="p">(</span><span class="n">years</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">increaceByYear</span><span class="p">;</span>
+<span class="c1"># 有岗位升迁的员工, 每年收入增长
+</span><span class="c1"></span><span class="k">SELECT</span> <span class="nf">ROUND</span><span class="p">((</span><span class="n">max</span><span class="o">-</span><span class="n">min</span><span class="p">)</span><span class="o">/</span><span class="n">min</span><span class="o">/</span><span class="p">(</span><span class="n">years</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">increaceByYear</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">num</span>
+<span class="k">FROM</span><span class="p">(</span>
+    <span class="k">SELECT</span> <span class="n">t1</span><span class="p">.</span><span class="n">emp_no</span><span class="p">,</span> <span class="nf">MAXx</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">as</span> <span class="n">max</span><span class="p">,</span> <span class="nf">MIN</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">as</span> <span class="n">min</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="n">years</span>
+    <span class="k">FROM</span><span class="p">(</span>
+        <span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span> <span class="n">salary</span>
+        <span class="k">FROM</span> <span class="n">salaries</span>
+    <span class="p">)</span> <span class="n">t1</span>
+    <span class="k">JOIN</span><span class="p">(</span>
+        <span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">tt</span>
+        <span class="k">FROM</span> <span class="n">titles</span>
+        <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">emp_no</span>
+        <span class="k">HAVING</span> <span class="n">tt</span><span class="o">&gt;</span><span class="mi">1</span>
+    <span class="p">)</span> <span class="n">t2</span> 
+    <span class="k">ON</span> <span class="n">t1</span><span class="p">.</span><span class="n">emp_no</span> <span class="o">=</span> <span class="n">t2</span><span class="p">.</span><span class="n">emp_no</span>
+    <span class="n">gGROUP</span> <span class="k">BY</span> <span class="n">t1</span><span class="p">.</span><span class="n">emp_no</span>
+    <span class="k">HAVING</span> <span class="n">years</span> <span class="o">&gt;</span> <span class="mi">1</span>
+<span class="p">)</span> <span class="n">tt</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="nf">ROUND</span><span class="p">((</span><span class="n">max</span><span class="o">-</span><span class="n">min</span><span class="p">)</span><span class="o">/</span><span class="n">min</span><span class="o">/</span><span class="p">(</span><span class="n">years</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">increaceByYear</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>在Excel中分析得：</p>
+
+<p><img src="../../image/总体每年收入增长分析.png" alt="" /></p>
+
+<p><img src="../../image/有岗位升迁员工的年收入增长分析.png" alt="" /></p>
+
+<p>得出结论：公司大部分员工的年收入都有一定增长，大部分的增长率处于0.02-0.06之间，而岗位有升迁的员工年收入增长普遍处于0.03-0.05之间，比没有岗位升迁的员工多了0.01。</p>
+
+<h3 id="4-4-各部门员工分布">4.4 各部门员工分布</h3>
+
+<p>可以分析各部门的人数差异及平均工资差异：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1">#各部门人数
+</span><span class="c1"></span><span class="k">SELECT</span> <span class="n">dept_no</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">dept_emp</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">dept_no</span><span class="p">;</span>
+<span class="c1">#各部门平均工资
+</span><span class="c1"></span><span class="k">SELECT</span> <span class="n">dept_no</span><span class="p">,</span> <span class="nf">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">AS</span> <span class="n">dept_avg_salary</span>
+<span class="k">FROM</span> <span class="n">dept_emp</span> <span class="n">d</span><span class="p">,</span> <span class="n">salaries</span> <span class="n">s</span>
+<span class="k">WHERE</span> <span class="n">d</span><span class="p">.</span><span class="n">emp_no</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">emp_no</span>
+<span class="k">AND</span> <span class="kt">YEAR</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">to_date</span><span class="p">)</span> <span class="o">=</span> <span class="mi">9999</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">dept_no</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>导入Excel可得：</p>
+
+<p><img src="../../image/各部门员工人数及工资分析.png" alt="" /></p>
+
+<p>得出结论：部门d004和d005的员工数最多，d007的员工平均工资最高。</p>
 
     </div>
 
