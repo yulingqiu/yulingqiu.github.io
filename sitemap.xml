@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>http://yulingqiu.github.io/tags/%E8%81%8C%E5%9C%BA/</loc>
+    <loc>http://yulingqiu.github.io/categories/%E8%81%8C%E5%9C%BA/</loc>
     <lastmod>2019-10-14T18:13:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://yulingqiu.github.io/categories/%E8%81%8C%E5%9C%BA/</loc>
+    <loc>http://yulingqiu.github.io/tags/%E8%81%8C%E5%9C%BA/</loc>
     <lastmod>2019-10-14T18:13:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -235,13 +235,6 @@
   <url>
     <loc>http://yulingqiu.github.io/about/</loc>
     <lastmod>2019-10-10T22:19:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://yulingqiu.github.io/post/mysql-notes-00/</loc>
-    <lastmod>2019-10-10T19:29:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

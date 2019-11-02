@@ -73,7 +73,7 @@
 
 <meta itemprop="datePublished" content="2019-11-02T13:57:16&#43;08:00" />
 <meta itemprop="dateModified" content="2019-11-02T13:57:16&#43;08:00" />
-<meta itemprop="wordCount" content="1213">
+<meta itemprop="wordCount" content="1295">
 
 
 
@@ -310,7 +310,7 @@
             <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
             
           </div>
-        <span class="more-meta"> 约 1213 字 </span>
+        <span class="more-meta"> 约 1295 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
 
         
@@ -335,25 +335,17 @@
 <ul>
 <li>
 <ul>
-<li><a href="#1-系统变量">1、系统变量</a></li>
+<li><a href="#1-系统变量">1、系统变量</a>
+<ul>
+<li><a href="#①全局变量">①全局变量</a></li>
+<li><a href="#②会话变量">②会话变量</a></li>
 </ul></li>
-<li><a href="#①查看所有全局变量">①查看所有全局变量</a></li>
-<li><a href="#②查看部分全局变量">②查看部分全局变量</a></li>
-<li><a href="#③查看指定的全局变量的值">③查看指定的全局变量的值</a></li>
-<li><a href="#④为某个指定的全局变量赋值">④为某个指定的全局变量赋值</a></li>
-<li><a href="#①查看所有会话变量">①查看所有会话变量</a></li>
-<li><a href="#②查看部分会话变量">②查看部分会话变量</a></li>
-<li><a href="#③查看指定的会话变量的值">③查看指定的会话变量的值</a></li>
-<li><a href="#④为某个指定的会话变量赋值">④为某个指定的会话变量赋值</a></li>
-<li><a href="#方式1">方式1：</a></li>
-<li><a href="#方式2">方式2：</a></li>
-<li><a href="#①声明并初始化">①声明并初始化</a></li>
-<li><a href="#②赋值-更新用户变量的值">②赋值（更新用户变量的值）</a></li>
-<li><a href="#③使用-查看用户变量的值">③使用（查看用户变量的值）</a></li>
-<li><a href="#①-声明">① 声明</a></li>
-<li><a href="#②赋值">②赋值</a></li>
-<li><a href="#③使用">③使用</a></li>
-<li><a href="#案例-声明2个变量并赋初始值-求和-并打印">案例:声明2个变量并赋初始值，求和，并打印</a></li>
+<li><a href="#2-自定义变量">2、自定义变量</a>
+<ul>
+<li><a href="#①用户变量">①用户变量</a></li>
+<li><a href="#②局部变量">②局部变量</a></li>
+</ul></li>
+</ul></li>
 </ul>
 </nav>
   </div>
@@ -387,162 +379,33 @@
 <p>语法：</p>
 
 <p>1、查看所有的系统变量</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-SHOW GLOBAL|[SESSION] VARIABLES;```默认是SESSION" data-lang="SHOW GLOBAL|[SESSION] VARIABLES;```默认是SESSION"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-SHOW GLOBAL|[SESSION] VARIABLES;```默认是SESSION" data-lang="SHOW GLOBAL|[SESSION] VARIABLES;```默认是SESSION">2、查看满足条件的部分系统变量</code></pre></td></tr></table>
-</div>
-</div>
-<p>SHOW GLOBAL|[SESSION] VARIABLES LIKE &lsquo;%char%&rsquo;;```</p>
+
+<p>SHOW GLOBAL|[SESSION] VARIABLES;  （默认是SESSION）</p>
+
+<p>2、查看满足条件的部分系统变量</p>
+
+<p>SHOW GLOBAL|[SESSION] VARIABLES LIKE &lsquo;%char%&rsquo;;</p>
 
 <p>3、查看指定的某个系统变量的值</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-SELECT @@系统变量名;```" data-lang="SELECT @@系统变量名;```"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-SELECT @@系统变量名;```" data-lang="SELECT @@系统变量名;```">4、为某个系统变量赋值
 
-方式1：</code></pre></td></tr></table>
-</div>
-</div>
-<p>SET GLOBAL|[SESSION]系统变量名 = 值;```</p>
+<p>SELECT @@系统变量名;</p>
+
+<p>4、为某个系统变量赋值</p>
+
+<p>方式1：</p>
+
+<p>SET GLOBAL|[SESSION]系统变量名 = 值;</p>
 
 <p>方式2：</p>
+
+<p>SET GLOBLA|[SESSION].系统变量名 = 值;</p>
+
+<p>注意：如果是全局级别，则需要加<code>GLOBAL</code>，如果是会话级别，则需要加<code>SESSION</code>；如果不写，则默认为SESSION。</p>
+
+<h3 id="①全局变量">①全局变量</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-SET GLOBLA|[SESSION].系统变量名 = 值;```" data-lang="SET GLOBLA|[SESSION].系统变量名 = 值;```"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-SET GLOBLA|[SESSION].系统变量名 = 值;```" data-lang="SET GLOBLA|[SESSION].系统变量名 = 值;```">注意：如果是全局级别，则需要加``` GLOBAL```，如果是会话级别，则需要加```SESSION```；如果不写，则默认为SESSION。
-
-### ①全局变量</code></pre></td></tr></table>
-</div>
-</div>
-<p>mysql
-/*
-    作用域：服务器每次启动将为所有的全局变量赋初始值，针对于所有的会话（连接）有效，但不能跨重启
-*/</p>
-
-<h1 id="①查看所有全局变量">①查看所有全局变量</h1>
-
-<p>SHOW GLOBAL VARIABLES;</p>
-
-<h1 id="②查看部分全局变量">②查看部分全局变量</h1>
-
-<p>SHOW GLOBAL VARIABLES LIKE &lsquo;%char%&rsquo;;</p>
-
-<h1 id="③查看指定的全局变量的值">③查看指定的全局变量的值</h1>
-
-<p>SELECT @@global.autocommit;
-SELECT @@global.tx_isolation;</p>
-
-<h1 id="④为某个指定的全局变量赋值">④为某个指定的全局变量赋值</h1>
-
-<p>SET @@global.autocommit = 1;  # 跨连接有效</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">### ②会话变量</pre></td></tr></table>
-</div>
-</div>
-<p>mysql
-/*
-    作用域：仅仅针对于当前会话（连接）有效
-*/</p>
-
-<h1 id="①查看所有会话变量">①查看所有会话变量</h1>
-
-<p>SHOW VARIABLES;
-SHOW SESSION VARIABLES;</p>
-
-<h1 id="②查看部分会话变量">②查看部分会话变量</h1>
-
-<p>SHOW VARIABLES LIKE &lsquo;%char%&rsquo;;
-SHOW SESSION VARIABLES LIKE &lsquo;%char%&rsquo;;</p>
-
-<h1 id="③查看指定的会话变量的值">③查看指定的会话变量的值</h1>
-
-<p>SELECT @@tx_isolation;
-SELECT @@session.tx_isolation;</p>
-
-<h1 id="④为某个指定的会话变量赋值">④为某个指定的会话变量赋值</h1>
-
-<h1 id="方式1">方式1：</h1>
-
-<p>SET @@tx_isolation = &lsquo;read-uncommited&rsquo;;
-SET @@SESSION.tx_isolation = &lsquo;read-uncommitted&rsquo;;</p>
-
-<h1 id="方式2">方式2：</h1>
-
-<p>SET tx_isolation = &lsquo;read-committed&rsquo;;
-SET SESSION tx_isolation = &lsquo;read-committed&rsquo;;</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">## 2、自定义变量
-
-说明：自定义变量是用户自定义的，不是由系统定义的
-
-使用步骤：声明——赋值——使用（查看、比较、运算等）
-
-### ①用户变量</pre></td></tr></table>
-</div>
-</div>
-<p>MYSQL
-/*
-    作用域：针对于当前会话（连接）有效，和会话变量的作用域相同
-    应用在任何地方，也就是BEGIN …… END 里面或者外面
-*/</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">赋值的操作符：  ```=``` 或``` :=```</pre></td></tr></table>
-</div>
-</div>
-<p>mysql</p>
-
-<h1 id="①声明并初始化">①声明并初始化</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">#方法一：
-    #SET @用户变量名 = 值;
-#方法二：
-    #SET @用户变量名 := 值
-#方式三：
-    # SELECT @用户变量名 := 值;</pre></td></tr></table>
-</div>
-</div>
-<h1 id="②赋值-更新用户变量的值">②赋值（更新用户变量的值）</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -558,94 +421,30 @@ SET SESSION tx_isolation = &lsquo;read-committed&rsquo;;</p>
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">#方式一：通过SET 或 SEECT 
-    # SET @用户变量名 = 值;
-    # SET @用户变量名 := 值
-    # SELECT @用户变量名 := 值;
-    # 案例：
-        SET @name = &#39;john&#39;;
-        SET @name = 100;
-# 方式二：通过 SELECT INTO
-    /*
-        SELECT 字段 INTO @变量名
-        FROM 表
-    */
-    # 案例：
-        SET @count = 1;
-        SELECT COUNT(*) INTO @count
-        FROM employees;</pre></td></tr></table>
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="cm">/*
+</span><span class="cm">	作用域：服务器每次启动将为所有的全局变量赋初始值，针对于所有的会话（连接）有效，但不能跨重启
+</span><span class="cm">*/</span>
+
+<span class="c1"># ①查看所有全局变量
+</span><span class="c1"></span><span class="k">SHOW</span> <span class="n">GLOBAL</span> <span class="n">VARIABLES</span><span class="p">;</span>
+
+<span class="c1"># ②查看部分全局变量
+</span><span class="c1"></span><span class="k">SHOW</span> <span class="n">GLOBAL</span> <span class="n">VARIABLES</span> <span class="k">LIKE</span> <span class="s1">&#39;%char%&#39;</span><span class="p">;</span>
+
+<span class="c1"># ③查看指定的全局变量的值
+</span><span class="c1"></span><span class="k">SELECT</span> <span class="o">@@</span><span class="n">global</span><span class="p">.</span><span class="n">autocommit</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="o">@@</span><span class="n">global</span><span class="p">.</span><span class="n">tx_isolation</span><span class="p">;</span>
+
+<span class="c1"># ④为某个指定的全局变量赋值
+</span><span class="c1"></span><span class="kt">SET</span> <span class="o">@@</span><span class="n">global</span><span class="p">.</span><span class="n">autocommit</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1"># 跨连接有效</span></code></pre></td></tr></table>
 </div>
 </div>
-<h1 id="③使用-查看用户变量的值">③使用（查看用户变量的值）</h1>
+<h3 id="②会话变量">②会话变量</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma"># SELECT @用户变量名;
-# 案例:
-    SELECT @count;</pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">### ②局部变量</pre></td></tr></table>
-</div>
-</div>
-<p>mysql
-/*
-    作用域：仅仅在定义它的BEGIN ……END中有效
-    应用在 BEGIN……END中，且只能是第一句话！！！！
-*/</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"></pre></td>
-<td class="lntd">
-<pre class="chroma"></pre></td></tr></table>
-</div>
-</div>
-<p>mysql</p>
-
-<h1 id="①-声明">① 声明</h1>
-
-<p>DECLARE 变量名 类型；
-DECLARE 变量名 类型 DEFAULT 值；</p>
-
-<h1 id="②赋值">②赋值</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma"># 方式1：通过SET 或 SELECT 
-    SET 局部变量名 = 值;
-    SET 局部变量名 := 值;
-    SELECT @局部变量名 := 值;
-# 方式2：通 SELECT INTO
-    SELECT 字段 INTO 局部变量名
-    FROM 表;</pre></td></tr></table>
-</div>
-</div>
-<h1 id="③使用">③使用</h1>
-
-<p>SELECT 局部变量名;</p>
-
-<h1 id="案例-声明2个变量并赋初始值-求和-并打印">案例:声明2个变量并赋初始值，求和，并打印</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -656,23 +455,207 @@ DECLARE 变量名 类型 DEFAULT 值；</p>
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span></pre></td>
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"># 1、用户变量
-    SET @m := 1;
-    SET @n := 2;
-    SET @sum := @m + @n;
-    SELECT @sum;
-# 2、局部变量(报错，需放在BEGIN……END中)
-    DECLARE m INT DAFAULT 1;
-    DECLARE n INT DEFAULT 2;
-    DECLARE sum INT;
-    SET sum = m + n;
-    SELECT sum;</pre></td></tr></table>
-</div>
-</div>
-<p>```</p>
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="cm">/*
+</span><span class="cm">	作用域：仅仅针对于当前会话（连接）有效
+</span><span class="cm">*/</span>
 
+<span class="c1"># ①查看所有会话变量
+</span><span class="c1"></span><span class="k">SHOW</span> <span class="n">VARIABLES</span><span class="p">;</span>
+<span class="k">SHOW</span> <span class="n">SESSION</span> <span class="n">VARIABLES</span><span class="p">;</span>
+
+<span class="c1"># ②查看部分会话变量
+</span><span class="c1"></span><span class="k">SHOW</span> <span class="n">VARIABLES</span> <span class="k">LIKE</span> <span class="s1">&#39;%char%&#39;</span><span class="p">;</span>
+<span class="k">SHOW</span> <span class="n">SESSION</span> <span class="n">VARIABLES</span> <span class="k">LIKE</span> <span class="s1">&#39;%char%&#39;</span><span class="p">;</span>
+
+<span class="c1"># ③查看指定的会话变量的值
+</span><span class="c1"></span><span class="k">SELECT</span> <span class="o">@@</span><span class="n">tx_isolation</span><span class="p">;</span>
+<span class="k">SELECT</span> <span class="o">@@</span><span class="n">session</span><span class="p">.</span><span class="n">tx_isolation</span><span class="p">;</span>
+
+<span class="c1"># ④为某个指定的会话变量赋值
+</span><span class="c1"># 方式1：
+</span><span class="c1"></span><span class="kt">SET</span> <span class="o">@@</span><span class="n">tx_isolation</span> <span class="o">=</span> <span class="s1">&#39;read-uncommited&#39;</span><span class="p">;</span>
+<span class="kt">SET</span> <span class="o">@@</span><span class="n">SESSION</span><span class="p">.</span><span class="n">tx_isolation</span> <span class="o">=</span> <span class="s1">&#39;read-uncommitted&#39;</span><span class="p">;</span>
+<span class="c1"># 方式2：
+</span><span class="c1"></span><span class="kt">SET</span> <span class="n">tx_isolation</span> <span class="o">=</span> <span class="s1">&#39;read-committed&#39;</span><span class="p">;</span>
+<span class="kt">SET</span> <span class="n">SESSION</span> <span class="n">tx_isolation</span> <span class="o">=</span> <span class="s1">&#39;read-committed&#39;</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="2-自定义变量">2、自定义变量</h2>
+
+<p>说明：自定义变量是用户自定义的，不是由系统定义的</p>
+
+<p>使用步骤：声明——赋值——使用（查看、比较、运算等）</p>
+
+<h3 id="①用户变量">①用户变量</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-MYSQL" data-lang="MYSQL"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-MYSQL" data-lang="MYSQL"><span class="cm">/*
+</span><span class="cm">	作用域：针对于当前会话（连接）有效，和会话变量的作用域相同
+</span><span class="cm">	应用在任何地方，也就是BEGIN …… END 里面或者外面
+</span><span class="cm">*/</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>赋值的操作符：  <code>=</code> 或<code>:=</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1"># ①声明并初始化
+</span><span class="c1"></span>	<span class="c1">#方法一：
+</span><span class="c1"></span>    	<span class="c1">#SET @用户变量名 = 值;
+</span><span class="c1"></span>    <span class="c1">#方法二：
+</span><span class="c1"></span>    	<span class="c1">#SET @用户变量名 := 值
+</span><span class="c1"></span>    <span class="c1">#方式三：
+</span><span class="c1"></span>    	<span class="c1"># SELECT @用户变量名 := 值;
+</span><span class="c1"></span>    	
+<span class="c1"># ②赋值（更新用户变量的值）
+</span><span class="c1"></span> 	<span class="c1">#方式一：通过SET 或 SEECT 
+</span><span class="c1"></span> 		<span class="c1"># SET @用户变量名 = 值;
+</span><span class="c1"></span>    	<span class="c1"># SET @用户变量名 := 值
+</span><span class="c1"></span>    	<span class="c1"># SELECT @用户变量名 := 值;
+</span><span class="c1"></span>        <span class="c1"># 案例：
+</span><span class="c1"></span>            <span class="kt">SET</span> <span class="o">@</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;john&#39;</span><span class="p">;</span>
+            <span class="kt">SET</span> <span class="o">@</span><span class="n">name</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="c1"># 方式二：通过 SELECT INTO
+</span><span class="c1"></span>    	<span class="cm">/*
+</span><span class="cm">    		SELECT 字段 INTO @变量名
+</span><span class="cm">    		FROM 表
+</span><span class="cm">    	*/</span>
+    	<span class="c1"># 案例：
+</span><span class="c1"></span>    		<span class="kt">SET</span> <span class="o">@</span><span class="n">count</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    		<span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">INTO</span> <span class="o">@</span><span class="n">count</span>
+    		<span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
+<span class="c1"># ③使用（查看用户变量的值）
+</span><span class="c1"></span>	<span class="c1"># SELECT @用户变量名;
+</span><span class="c1"></span>	<span class="c1"># 案例:
+</span><span class="c1"></span>		<span class="k">SELECT</span> <span class="o">@</span><span class="n">count</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="②局部变量">②局部变量</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="cm">/*
+</span><span class="cm">	作用域：仅仅在定义它的BEGIN ……END中有效
+</span><span class="cm">	应用在 BEGIN……END中，且只能是第一句话！！！！
+</span><span class="cm">*/</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1"># ① 声明
+</span><span class="c1"></span><span class="k">DECLARE</span> <span class="err">变量名</span> <span class="err">类型；</span>
+<span class="k">DECLARE</span> <span class="err">变量名</span> <span class="err">类型</span> <span class="k">DEFAULT</span> <span class="err">值；</span>
+
+<span class="c1"># ②赋值
+</span><span class="c1"></span>	<span class="c1"># 方式1：通过SET 或 SELECT 
+</span><span class="c1"></span>		<span class="kt">SET</span> <span class="err">局部变量名</span> <span class="o">=</span> <span class="err">值</span><span class="p">;</span>
+		<span class="kt">SET</span> <span class="err">局部变量名</span> <span class="p">:</span><span class="o">=</span> <span class="err">值</span><span class="p">;</span>
+		<span class="k">SELECT</span> <span class="o">@</span><span class="err">局部变量名</span> <span class="p">:</span><span class="o">=</span> <span class="err">值</span><span class="p">;</span>
+	<span class="c1"># 方式2：通 SELECT INTO
+</span><span class="c1"></span>		<span class="k">SELECT</span> <span class="err">字段</span> <span class="k">INTO</span> <span class="err">局部变量名</span>
+		<span class="k">FROM</span> <span class="err">表</span><span class="p">;</span>
+
+<span class="c1"># ③使用
+</span><span class="c1"></span><span class="k">SELECT</span> <span class="err">局部变量名</span><span class="p">;</span>
+
+<span class="c1"># 案例:声明2个变量并赋初始值，求和，并打印
+</span><span class="c1"></span>    <span class="c1"># 1、用户变量
+</span><span class="c1"></span>        <span class="kt">SET</span> <span class="o">@</span><span class="n">m</span> <span class="p">:</span><span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">SET</span> <span class="o">@</span><span class="n">n</span> <span class="p">:</span><span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="kt">SET</span> <span class="o">@</span><span class="n">sum</span> <span class="p">:</span><span class="o">=</span> <span class="o">@</span><span class="n">m</span> <span class="o">+</span> <span class="o">@</span><span class="n">n</span><span class="p">;</span>
+        <span class="k">SELECT</span> <span class="o">@</span><span class="n">sum</span><span class="p">;</span>
+    <span class="c1"># 2、局部变量(报错，需放在BEGIN……END中)
+</span><span class="c1"></span>        <span class="k">DECLARE</span> <span class="n">m</span> <span class="kt">INT</span> <span class="n">DAFAULT</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">DECLARE</span> <span class="n">n</span> <span class="kt">INT</span> <span class="k">DEFAULT</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="k">DECLARE</span> <span class="n">sum</span> <span class="kt">INT</span><span class="p">;</span>
+        <span class="kt">SET</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="n">n</span><span class="p">;</span>
+        <span class="k">SELECT</span> <span class="n">sum</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
 <p>对比用户变量和局部变量：</p>
 
 <table>
