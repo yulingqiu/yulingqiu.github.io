@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>MySQL公司员工分析过程 - 栖迟于一丘</title>
+  <title>MySQL笔记-07视图 - 栖迟于一丘</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="版权所有，转载请注明出处。工作请联系qiuyuling98@163.com" />
-  <meta name="description" content="一、分析目的 通过数据，分析企业员工结构，工资变化，以便了解公司的内部情况，改善企业管理方式。 二、 数据来源及数据字段定义 数据来源：employ" />
+  <meta name="description" content="视图含义： 一种虚拟存在的表，行和列是数据来自定义视图的查询中使用的表，并且是在使用视图时动态生成的，只保存了SQL逻辑，不保存查询结果。 应用" />
 
   <meta name="keywords" content="数据分析, Python, Office, 博客, 笔记" />
 
@@ -35,7 +35,7 @@
 <meta name="generator" content="Hugo 0.58.3" />
 
 
-<link rel="canonical" href="http://yulingqiu.github.io/post/mysql_excel/" />
+<link rel="canonical" href="http://yulingqiu.github.io/post/mysql_notes_07/" />
 
 
 
@@ -61,26 +61,26 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="MySQL公司员工分析过程" />
-<meta property="og:description" content="一、分析目的 通过数据，分析企业员工结构，工资变化，以便了解公司的内部情况，改善企业管理方式。 二、 数据来源及数据字段定义 数据来源：employ" />
+<meta property="og:title" content="MySQL笔记-07视图" />
+<meta property="og:description" content="视图含义： 一种虚拟存在的表，行和列是数据来自定义视图的查询中使用的表，并且是在使用视图时动态生成的，只保存了SQL逻辑，不保存查询结果。 应用" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://yulingqiu.github.io/post/mysql_excel/" />
-<meta property="article:published_time" content="2019-10-25T17:22:04+08:00" />
-<meta property="article:modified_time" content="2019-10-25T17:22:04+08:00" />
-<meta itemprop="name" content="MySQL公司员工分析过程">
-<meta itemprop="description" content="一、分析目的 通过数据，分析企业员工结构，工资变化，以便了解公司的内部情况，改善企业管理方式。 二、 数据来源及数据字段定义 数据来源：employ">
+<meta property="og:url" content="http://yulingqiu.github.io/post/mysql_notes_07/" />
+<meta property="article:published_time" content="2019-11-02T13:56:48+08:00" />
+<meta property="article:modified_time" content="2019-11-02T13:56:48+08:00" />
+<meta itemprop="name" content="MySQL笔记-07视图">
+<meta itemprop="description" content="视图含义： 一种虚拟存在的表，行和列是数据来自定义视图的查询中使用的表，并且是在使用视图时动态生成的，只保存了SQL逻辑，不保存查询结果。 应用">
 
 
-<meta itemprop="datePublished" content="2019-10-25T17:22:04&#43;08:00" />
-<meta itemprop="dateModified" content="2019-10-25T17:22:04&#43;08:00" />
-<meta itemprop="wordCount" content="1390">
+<meta itemprop="datePublished" content="2019-11-02T13:56:48&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-02T13:56:48&#43;08:00" />
+<meta itemprop="wordCount" content="1705">
 
 
 
-<meta itemprop="keywords" content="MySQL,项目," />
+<meta itemprop="keywords" content="MySQL,笔记," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MySQL公司员工分析过程"/>
-<meta name="twitter:description" content="一、分析目的 通过数据，分析企业员工结构，工资变化，以便了解公司的内部情况，改善企业管理方式。 二、 数据来源及数据字段定义 数据来源：employ"/>
+<meta name="twitter:title" content="MySQL笔记-07视图"/>
+<meta name="twitter:description" content="视图含义： 一种虚拟存在的表，行和列是数据来自定义视图的查询中使用的表，并且是在使用视图时动态生成的，只保存了SQL逻辑，不保存查询结果。 应用"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -300,25 +300,25 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">MySQL公司员工分析过程</h1>
+      <h1 class="post-title">MySQL笔记-07视图</h1>
       
       <div class="post-meta">
-        <time datetime="2019-10-25" class="post-time">
-          2019-10-25
+        <time datetime="2019-11-02" class="post-time">
+          2019-11-02
         </time>
         <div class="post-category">
             <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
             
           </div>
-        <span class="more-meta"> 约 1390 字 </span>
-          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span class="more-meta"> 约 1705 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
 
         
         
 
         
         
-          <span id="/post/mysql_excel/" class="leancloud_visitors" data-flag-title="MySQL公司员工分析过程">
+          <span id="/post/mysql_notes_07/" class="leancloud_visitors" data-flag-title="MySQL笔记-07视图">
             <span class="post-meta-item-text"> | 阅读 </span>
             <span class="leancloud-visitors-count"></span>
           </span>
@@ -335,16 +335,12 @@
 <ul>
 <li>
 <ul>
-<li><a href="#一-分析目的">一、分析目的</a></li>
-<li><a href="#二-数据来源及数据字段定义">二、 数据来源及数据字段定义</a></li>
-<li><a href="#三-数据处理">三、 数据处理</a></li>
-<li><a href="#四-数据分析">四、 数据分析</a>
-<ul>
-<li><a href="#4-1-公司发展趋势分析">4.1 公司发展趋势分析</a></li>
-<li><a href="#4-2-公司员工价值观">4.2 公司员工价值观</a></li>
-<li><a href="#4-3-年薪增长率">4.3 年薪增长率</a></li>
-<li><a href="#4-4-各部门员工分布">4.4 各部门员工分布</a></li>
-</ul></li>
+<li><a href="#一-创建视图">一、创建视图</a></li>
+<li><a href="#二-视图的修改">二、视图的修改</a></li>
+<li><a href="#三-删除及查看视图">三、删除及查看视图</a></li>
+<li><a href="#四-视图的更新">四、视图的更新</a></li>
+<li><a href="#五-练习">五、练习</a></li>
+<li><a href="#六-测试题">六、测试题</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -355,105 +351,42 @@
     <div class="post-content">
       
 
-<h2 id="一-分析目的">一、分析目的</h2>
+<p>视图含义： 一种虚拟存在的表，行和列是数据来自定义视图的查询中使用的表，并且是在使用视图时动态生成的，只保存了SQL逻辑，不保存查询结果。</p>
 
-<p>通过数据，分析企业员工结构，工资变化，以便了解公司的内部情况，改善企业管理方式。</p>
-
-<h2 id="二-数据来源及数据字段定义">二、 数据来源及数据字段定义</h2>
-
-<p>数据来源：<a href="https://launchpad.net/test-db/employees-db-1/1.0.6">employees</a>以及<a href="https://www.cnblogs.com/chenyucong/p/5734800.html">安装方式</a></p>
-
-<p>数据大小：6张表，共计3919015条数据</p>
-
-<p>数据库表结构：</p>
-
-<p><img src=" https://images2015.cnblogs.com/blog/997030/201608/997030-20160803222340434-1548604795.png" style="zoom: 67%;" /></p>
-
-<p>departments:部门表, 记录部门编号和部门名称</p>
-
-<p>dept_emp:部门员工表,记录各部门下属员工编号, 以及员工在该部门工作的起始和终止日期</p>
-
-<p>dept_manager:部门经理表, 记录对应的部门经理的员工编号, 以及在该部门工作的起始和终止日期</p>
-
-<p>employees:员工信息表, 记录员工初始日期, 姓名, 性别和雇佣日期信息</p>
-
-<p>salaries:薪水表, 记录员工某段日期的薪水</p>
-
-<p>titles:岗位表, 记录员工的岗位信息, 即该岗位任职起始和终止日期信息</p>
-
-<h2 id="三-数据处理">三、 数据处理</h2>
-
-<p>MySQL官方的数据库 基本上已经是比较干净的数据，因此不需要太多的清洗工作。查看各个表格是否有缺失值：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">dept_no</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">dept_name</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">departments</span><span class="p">;</span>
-<span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">emp_no</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">dept_no</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">from_date</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">to_date</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">dept_emp</span><span class="p">;</span>
-<span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">emp_no</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">dept_no</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">from_date</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">to_date</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">dept_manager</span><span class="p">;</span>
-<span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">emp_no</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">birth_date</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">first_name</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">last_name</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">gender</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">hire_date</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
-<span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">emp_no</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">salary</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">from_date</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">to_date</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">salaries</span><span class="p">;</span>
-<span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">emp_no</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">dept_no</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">from_date</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">to_date</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">dept_emp</span><span class="p">;</span>
-<span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">emp_no</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">title</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">from_date</span><span class="p">),</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">to_date</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">titles</span><span class="p">;</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>结果显示共有8个部门，24名管理岗员工，300024名员工，2844047条工资，443308条员工岗位数据，各列数据均没有缺失。</p>
-
-<h2 id="四-数据分析">四、 数据分析</h2>
-
-<h3 id="4-1-公司发展趋势分析">4.1 公司发展趋势分析</h3>
-
-<p>可以从公司各年工资支出、各年平均工资变化及公司各年入职离职数量这3方面进行分析：</p>
+<p>应用场景：</p>
 
 <ul>
-<li><p>公司各年工资支出分析</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">SELECT</span> <span class="kt">YEAR</span><span class="p">(</span><span class="n">from_date</span><span class="p">),</span> <span class="nf">SUM</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">AS</span> <span class="n">cost</span>
-<span class="k">FROM</span> <span class="n">salaries</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="kt">YEAR</span><span class="p">(</span><span class="n">from_date</span><span class="p">);</span></code></pre></td></tr></table>
-</div>
-</div></li>
+<li>多个地方用到同样的查询结果</li>
+<li>该查询结果使用的SQL语句较复杂</li>
+<li>视图和表的区别：</li>
 </ul>
 
-<p>将查询结果导入Excel，很容易得到：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>创建语法的关键字</th>
+<th>是否实际占有物理空间</th>
+<th>使用</th>
+</tr>
+</thead>
 
-<p><img src="../../image/公司每年工资支出分析.png" alt="" /></p>
+<tbody>
+<tr>
+<td>视图</td>
+<td>CREATE VIEW</td>
+<td>只是保存了SQL逻辑</td>
+<td>一般不能增删改查</td>
+</tr>
 
-<ul>
-<li><p>公司各年平均工资变化</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">SELECT</span> <span class="kt">YEAR</span><span class="p">(</span><span class="n">from_date</span><span class="p">),</span> <span class="nf">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
-<span class="k">FROM</span> <span class="n">salaries</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="kt">YEAR</span><span class="p">(</span><span class="n">from_date</span><span class="p">);</span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-
-<p>将查询结果导入Excel分析：</p>
-
-<p><img src="../../image/公司各年平均工资.png" alt="" /></p>
-
-<ul>
-<li><p>公司各年入职和离职数量</p>
+<tr>
+<td>表</td>
+<td>CREATE TABLE</td>
+<td>保存了数据</td>
+<td>增删改查</td>
+</tr>
+</tbody>
+</table>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
@@ -473,82 +406,28 @@
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
-</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1"># 每年入职
-</span><span class="c1"></span><span class="k">SELECT</span> <span class="kt">YEAR</span><span class="p">(</span><span class="n">tt</span><span class="p">.</span><span class="n">from_date</span><span class="p">)</span> <span class="k">AS</span> <span class="n">from_date</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">num</span>
-<span class="k">FROM</span><span class="p">(</span>
-<span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span> <span class="nf">MIN</span><span class="p">(</span><span class="n">from_date</span><span class="p">)</span> <span class="k">AS</span> <span class="n">from_date</span><span class="p">,</span> <span class="nf">MAXx</span><span class="p">(</span><span class="n">to_date</span><span class="p">)</span> <span class="k">AS</span> <span class="n">to_date</span>
-<span class="k">FROM</span> <span class="n">dept_emp</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">emp_no</span>
-<span class="p">)</span> <span class="n">tt</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="kt">YEAR</span><span class="p">(</span><span class="n">tt</span><span class="p">.</span><span class="n">from_date</span><span class="p">)</span>
-<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">from_date</span><span class="p">;</span>
-<span class="c1"># 每年离职
-</span><span class="c1"></span><span class="k">SELECT</span> <span class="kt">YEAR</span><span class="p">(</span><span class="n">tt</span><span class="p">.</span><span class="n">to_date</span><span class="p">)</span> <span class="k">AS</span> <span class="n">to_date</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">num</span>
-<span class="k">FROM</span><span class="p">(</span>
-<span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span> <span class="nf">MIN</span><span class="p">(</span><span class="n">from_date</span><span class="p">)</span> <span class="k">AS</span> <span class="n">from_date</span><span class="p">,</span> <span class="nf">MAXx</span><span class="p">(</span><span class="n">to_date</span><span class="p">)</span> <span class="k">AS</span> <span class="n">to_date</span>
-<span class="k">FROM</span> <span class="n">dept_emp</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">emp_no</span>
-<span class="p">)</span> <span class="n">tt</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="kt">YEAR</span><span class="p">(</span><span class="n">tt</span><span class="p">.</span><span class="n">to_date</span><span class="p">)</span>
-<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">to_date</span><span class="p">;</span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1"># 案例：查询姓张的学生名和专业名
+</span><span class="c1"></span><span class="k">SELECT</span> <span class="n">dtudentname</span><span class="p">,</span> <span class="n">majorname</span>
+<span class="k">FROM</span> <span class="n">stuinfo</span> <span class="n">s</span>
+<span class="k">JOIN</span> <span class="n">major</span> <span class="n">m</span>
+<span class="k">ON</span> <span class="n">s</span><span class="p">.</span><span class="n">majorid</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="n">majorid</span>
+<span class="k">WHERE</span> <span class="n">s</span><span class="p">.</span><span class="n">stuname</span> <span class="k">LIKE</span><span class="s1">&#39;张%&#39;</span><span class="p">;</span>
 
-<p>通过查询得到的数据，计算出下面两个指标:</p>
+<span class="k">CREATE</span> <span class="n">VIEW</span> <span class="n">v1</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span> <span class="n">stuname</span><span class="p">,</span> <span class="n">majorname</span>
+<span class="k">FROM</span> <span class="n">student</span> <span class="n">s</span>
+<span class="k">JOIN</span> <span class="n">major</span> <span class="n">m</span>
+<span class="k">ON</span> <span class="n">s</span><span class="p">.</span><span class="n">majorid</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="n">major</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span> <span class="n">s</span><span class="p">.</span><span class="n">majorid</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
-<ol>
-<li>每年在职员工数量</li>
-<li>每年离职率</li>
-</ol>
-
-<p>然后放入Excel中分析可得：</p>
-
-<p><img src="../../image/公司各年入职离职.png" alt="" /></p>
-
-<p>得出结论：公司每年公司各年工资支出、平均工资呈线性递增；  公司各年入职和离职数量情况是入大于出，但离职率在逐年递增。</p>
-
-<h3 id="4-2-公司员工价值观">4.2 公司员工价值观</h3>
-
-<p>可以进行员工性别年龄的交叉分析：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">SELECT</span> <span class="n">gender</span><span class="p">,</span> <span class="nf">ROUND</span><span class="p">((</span><span class="nf">TO_DAYS</span><span class="p">(</span><span class="s1">&#39;2002-08-01&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="nf">TO_DAYS</span><span class="p">(</span><span class="n">birth_date</span><span class="p">))</span><span class="o">/</span><span class="mi">365</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>  <span class="k">AS</span> <span class="n">ages</span><span class="p">,</span>
-<span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
-<span class="k">FROM</span><span class="p">(</span>
-    <span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span> <span class="n">birth_date</span><span class="p">,</span> <span class="n">gender</span>
-    <span class="k">FROM</span> <span class="n">employees</span>
-<span class="p">)</span> <span class="n">t1</span>
-<span class="k">JOIN</span><span class="p">(</span>
-    <span class="k">SELECT</span> <span class="n">emp_no</span> <span class="k">FROM</span> <span class="n">titles</span> <span class="k">WHERE</span> <span class="n">TO_DATE</span><span class="o">=</span><span class="s1">&#39;9999-01-01&#39;</span>
-<span class="p">)</span> <span class="n">t2</span> 
-<span class="k">ON</span> <span class="n">t1</span><span class="p">.</span><span class="n">emp_no</span> <span class="o">=</span> <span class="n">t2</span><span class="p">.</span><span class="n">emp_no</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">gender</span><span class="p">,</span> <span class="nf">ROUND</span><span class="p">((</span><span class="nf">TO_DAYS</span><span class="p">(</span><span class="s1">&#39;2002-08-01&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="nf">TO_DAYS</span><span class="p">(</span><span class="n">birth_date</span><span class="p">))</span><span class="o">/</span><span class="mi">365</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span></code></pre></td></tr></table>
+<span class="k">SELECT</span> <span class="o">*</span><span class="k">FROM</span> <span class="n">v1</span>
+<span class="k">WHERE</span> <span class="n">stuname</span> <span class="k">LIKE</span> <span class="s1">&#39;张%&#39;</span><span class="p">;</span></code></pre></td></tr></table>
 </div>
 </div>
-<p><img src="../../image/员工性别年龄交叉分析.png" alt="" /></p>
-
-<p>得出结论：公司男员工数量明显多于女员工，且公司员工的年龄位于38-50岁之间，各年龄分布均匀，没有太大差别。</p>
-
-<h3 id="4-3-年薪增长率">4.3 年薪增长率</h3>
-
-<p>可以分析全公司总体每年的平均收入增长及岗位有升迁的员工平均收入增长：</p>
+<h2 id="一-创建视图">一、创建视图</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
@@ -581,79 +460,392 @@
 </span><span class="lnt">28
 </span><span class="lnt">29
 </span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1">#总体每年收入增长
-</span><span class="c1"></span><span class="k">SELECT</span> <span class="nf">ROUND</span><span class="p">((</span><span class="n">max</span><span class="o">-</span><span class="n">min</span><span class="p">)</span><span class="o">/</span><span class="n">min</span><span class="o">/</span><span class="p">(</span><span class="n">years</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">increaceByYear</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">num</span>
-<span class="k">FROM</span><span class="p">(</span>
-    <span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">years</span><span class="p">,</span> <span class="nf">MAX</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">as</span> <span class="n">max</span><span class="p">,</span> <span class="nf">MIN</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">as</span> <span class="n">min</span>
-<span class="k">FROM</span> <span class="n">salaries</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">emp_no</span>
-<span class="k">HAVING</span> <span class="n">years</span> <span class="o">&gt;</span> <span class="mi">1</span>
-<span class="p">)</span> <span class="n">tt</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="nf">ROUND</span><span class="p">((</span><span class="n">max</span><span class="o">-</span><span class="n">min</span><span class="p">)</span><span class="o">/</span><span class="n">min</span><span class="o">/</span><span class="p">(</span><span class="n">years</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
-<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">increaceByYear</span><span class="p">;</span>
-<span class="c1"># 有岗位升迁的员工, 每年收入增长
-</span><span class="c1"></span><span class="k">SELECT</span> <span class="nf">ROUND</span><span class="p">((</span><span class="n">max</span><span class="o">-</span><span class="n">min</span><span class="p">)</span><span class="o">/</span><span class="n">min</span><span class="o">/</span><span class="p">(</span><span class="n">years</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span> <span class="k">AS</span> <span class="n">increaceByYear</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">num</span>
-<span class="k">FROM</span><span class="p">(</span>
-    <span class="k">SELECT</span> <span class="n">t1</span><span class="p">.</span><span class="n">emp_no</span><span class="p">,</span> <span class="nf">MAXx</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">as</span> <span class="n">max</span><span class="p">,</span> <span class="nf">MIN</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">as</span> <span class="n">min</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="n">years</span>
-    <span class="k">FROM</span><span class="p">(</span>
-        <span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span> <span class="n">salary</span>
-        <span class="k">FROM</span> <span class="n">salaries</span>
-    <span class="p">)</span> <span class="n">t1</span>
-    <span class="k">JOIN</span><span class="p">(</span>
-        <span class="k">SELECT</span> <span class="n">emp_no</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="n">tt</span>
-        <span class="k">FROM</span> <span class="n">titles</span>
-        <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">emp_no</span>
-        <span class="k">HAVING</span> <span class="n">tt</span><span class="o">&gt;</span><span class="mi">1</span>
-    <span class="p">)</span> <span class="n">t2</span> 
-    <span class="k">ON</span> <span class="n">t1</span><span class="p">.</span><span class="n">emp_no</span> <span class="o">=</span> <span class="n">t2</span><span class="p">.</span><span class="n">emp_no</span>
-    <span class="n">gGROUP</span> <span class="k">BY</span> <span class="n">t1</span><span class="p">.</span><span class="n">emp_no</span>
-    <span class="k">HAVING</span> <span class="n">years</span> <span class="o">&gt;</span> <span class="mi">1</span>
-<span class="p">)</span> <span class="n">tt</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="nf">ROUND</span><span class="p">((</span><span class="n">max</span><span class="o">-</span><span class="n">min</span><span class="p">)</span><span class="o">/</span><span class="n">min</span><span class="o">/</span><span class="p">(</span><span class="n">years</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="mi">2</span><span class="p">)</span>
-<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">increaceByYear</span><span class="p">;</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="cm">/*
+</span><span class="cm">	语法：
+</span><span class="cm">		CREATE VIEW 视图名
+</span><span class="cm">        AS
+</span><span class="cm">        查询语句;
+</span><span class="cm">        
+</span><span class="cm">*/</span>
+<span class="k">USE</span> <span class="n">myemployees</span><span class="p">;</span>
+
+<span class="c1"># 1.查询邮箱中包含a字符的员工名、部门名和工种信息
+</span><span class="c1"></span>	<span class="c1">#①创建
+</span><span class="c1"></span>	<span class="k">CREATE</span> <span class="n">VIEW</span> <span class="n">my_v1</span>
+	<span class="k">AS</span>
+	<span class="k">SELECT</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">department_name</span><span class="p">,</span> <span class="n">job_title</span>
+	<span class="k">FROM</span> <span class="n">employees</span> <span class="n">e</span>
+	<span class="k">JOIN</span> <span class="n">departments</span> <span class="n">d</span>
+	<span class="k">ON</span> <span class="n">e</span><span class="p">.</span><span class="n">department_id</span> <span class="o">=</span> <span class="n">d</span><span class="p">.</span><span class="n">department_id</span>
+	<span class="k">JOIN</span> <span class="n">jobs</span> <span class="n">j</span>
+	<span class="k">ON</span> <span class="n">j</span><span class="p">.</span><span class="n">job_id</span> <span class="o">=</span> <span class="n">e</span><span class="p">.</span><span class="n">job_id</span><span class="p">;</span>
+
+	<span class="c1"># ②使用
+</span><span class="c1"></span>	<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">my_v1</span> <span class="k">WHERE</span> <span class="n">last_name</span> <span class="k">LIKE</span> <span class="s1">&#39;%a%&#39;</span><span class="p">;</span>
+
+<span class="c1"># 2.查询各部门的平均工资级别
+</span><span class="c1"></span>	<span class="c1"># ①创建视图查看每个部门的平均工资
+</span><span class="c1"></span>    <span class="k">CREATE</span> <span class="n">VIEW</span> <span class="n">my_v2</span>
+    <span class="k">AS</span>
+    <span class="k">SELECT</span> <span class="n">department_id</span><span class="p">,</span> <span class="nf">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">AS</span> <span class="s1">&#39;ag&#39;</span>
+    <span class="k">FROM</span> <span class="n">employees</span>
+    <span class="k">GROUP</span> <span class="k">BY</span>  <span class="n">department_id</span><span class="p">;</span>
+	<span class="c1">#②使用
+</span><span class="c1"></span>    <span class="k">SELECT</span> <span class="n">department_id</span><span class="p">,</span> <span class="n">my_v2</span><span class="p">.</span><span class="n">ag</span><span class="p">,</span> <span class="n">g</span><span class="p">.</span><span class="n">grade_level</span>
+    <span class="k">FROM</span> <span class="n">my_v2</span>
+    <span class="k">JOIN</span> <span class="n">job_grades</span> <span class="n">g</span>
+    <span class="k">ON</span> <span class="n">my_v2</span><span class="p">.</span><span class="n">ag</span> <span class="k">BETWEEN</span> <span class="n">g</span><span class="p">.</span><span class="n">lowest_sal</span> <span class="k">AND</span> <span class="n">g</span><span class="p">.</span><span class="n">highest_sal</span><span class="p">;</span>
+    
+<span class="c1"># 3.查询平均工资最低的部门信息
+</span><span class="c1"></span>	<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">my_v2</span>
+    <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">ag</span>
+    <span class="k">LIMIT</span> <span class="mi">1</span><span class="p">;</span>
+    
+<span class="c1"># 4.查询平均工资最低的部门名和工资
+</span><span class="c1"></span>	<span class="k">CREATE</span> <span class="n">VIEW</span> <span class="n">my_v3</span>
+    <span class="k">AS</span>
+    <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">my_v2</span>
+    <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">ag</span>
+    <span class="k">LIMIT</span> <span class="mi">1</span><span class="p">;</span>
+    
+    <span class="k">SELECT</span> <span class="n">d</span><span class="p">.</span><span class="o">*</span><span class="p">,</span> <span class="n">m</span><span class="p">.</span><span class="n">ag</span>
+    <span class="k">FROM</span> <span class="n">my_v3</span> <span class="n">m</span>
+    <span class="k">JOIN</span> <span class="n">departments</span> <span class="n">d</span>
+    <span class="k">ON</span> <span class="n">m</span><span class="p">.</span><span class="n">department_id</span> <span class="o">=</span> <span class="n">d</span><span class="p">.</span><span class="n">department_id</span><span class="p">;</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>在Excel中分析得：</p>
+<p>视图的好处：</p>
 
-<p><img src="../../image/总体每年收入增长分析.png" alt="" /></p>
+<ul>
+<li>重用SQL语句</li>
+<li>简化复杂的SQL操作，不必知道它的查询细节</li>
+<li>保护数据，提高安全性</li>
+</ul>
 
-<p><img src="../../image/有岗位升迁员工的年收入增长分析.png" alt="" /></p>
-
-<p>得出结论：公司大部分员工的年收入都有一定增长，大部分的增长率处于0.02-0.06之间，而岗位有升迁的员工年收入增长普遍处于0.03-0.05之间，比没有岗位升迁的员工多了0.01。</p>
-
-<h3 id="4-4-各部门员工分布">4.4 各部门员工分布</h3>
-
-<p>可以分析各部门的人数差异及平均工资差异：</p>
+<h2 id="二-视图的修改">二、视图的修改</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1">#各部门人数
-</span><span class="c1"></span><span class="k">SELECT</span> <span class="n">dept_no</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">dept_emp</span> <span class="k">GROUP</span> <span class="k">BY</span> <span class="n">dept_no</span><span class="p">;</span>
-<span class="c1">#各部门平均工资
-</span><span class="c1"></span><span class="k">SELECT</span> <span class="n">dept_no</span><span class="p">,</span> <span class="nf">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">AS</span> <span class="n">dept_avg_salary</span>
-<span class="k">FROM</span> <span class="n">dept_emp</span> <span class="n">d</span><span class="p">,</span> <span class="n">salaries</span> <span class="n">s</span>
-<span class="k">WHERE</span> <span class="n">d</span><span class="p">.</span><span class="n">emp_no</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">emp_no</span>
-<span class="k">AND</span> <span class="kt">YEAR</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">to_date</span><span class="p">)</span> <span class="o">=</span> <span class="mi">9999</span>
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">dept_no</span><span class="p">;</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="cm">/*
+</span><span class="cm">	方式一：
+</span><span class="cm">		CREATE OR REPLACE VIEW 视图名
+</span><span class="cm">        AS
+</span><span class="cm">        查询语句;
+</span><span class="cm">*/</span>
+
+<span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="n">VIEW</span> <span class="n">my_v3</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span> <span class="nf">AVG</span><span class="p">(</span><span class="n">salary</span><span class="p">),</span> <span class="n">job_id</span>
+<span class="k">FROM</span> <span class="n">employees</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">job_id</span><span class="p">;</span>
+
+<span class="cm">/*
+</span><span class="cm">	方式二：
+</span><span class="cm">		ALTER VIEW 视图名
+</span><span class="cm">        AS
+</span><span class="cm">        查询语句;    
+</span><span class="cm">*/</span>
+<span class="k">ALTER</span> <span class="n">VIEW</span> <span class="n">my_v3</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>导入Excel可得：</p>
+<h2 id="三-删除及查看视图">三、删除及查看视图</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1">#删除语法：DROP VIEW 视图名1, 视图名2,……;
+</span><span class="c1"></span><span class="k">DROP</span> <span class="n">VIEW</span> <span class="n">my_v1</span><span class="p">,</span> <span class="n">my_v2</span><span class="p">,</span> <span class="n">my_v3</span><span class="p">;</span>
 
-<p><img src="../../image/各部门员工人数及工资分析.png" alt="" /></p>
+<span class="c1"># 查看语法
+</span><span class="c1"></span><span class="cm">/*
+</span><span class="cm">	DESC 视图名;   返回视图结构
+</span><span class="cm">    SHOW CREATE VIEW 视图名;  返回视图名、视图创建的语法、字符集……
+</span><span class="cm">*/</span>    
+<span class="k">CREATE</span> <span class="n">VIEW</span> <span class="n">my_v1</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span> <span class="o">*</span><span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
 
-<p>得出结论：部门d004和d005的员工数最多，d007的员工平均工资最高。</p>
+<span class="k">DESC</span> <span class="n">my_v1</span><span class="p">;</span>
+<span class="k">SHOW</span> <span class="k">CREATE</span> <span class="n">VIEW</span> <span class="n">my_v1</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="四-视图的更新">四、视图的更新</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="n">VIEW</span> <span class="n">my_v1</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">salary</span><span class="o">*</span><span class="mi">12</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="nf">IFNULL</span><span class="p">(</span><span class="n">commission_pct</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="k">AS</span> <span class="s1">&#39;annual salary&#39;</span>
+<span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
 
+<span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="n">VIEW</span> <span class="n">my_v2</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span>
+<span class="k">FROM</span> <span class="n">employees</span><span class="p">;</span>
+
+<span class="c1"># 1、插入
+</span><span class="c1"></span>	<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">my_v1</span>
+    <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;张飞&#39;</span><span class="p">,</span> <span class="s1">&#39;zf@qq.com&#39;</span><span class="p">,</span> <span class="mi">1000000</span><span class="p">);</span>		<span class="c1">#插入失败
+</span><span class="c1"></span>
+	<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">my_v2</span>
+    <span class="k">VALUES</span> <span class="p">(</span><span class="s1">&#39;张飞&#39;</span><span class="p">,</span> <span class="s1">&#39;zf@qq.com&#39;</span><span class="p">);</span>		<span class="c1">#插入成功,原表中也会插入
+</span><span class="c1"></span>    
+<span class="c1"># 2、修改
+</span><span class="c1"></span>	<span class="k">UPDATE</span> <span class="n">my_v1</span>
+    <span class="kt">SET</span> <span class="n">last_name</span> <span class="o">=</span> <span class="s1">&#39;张无忌&#39;</span>
+    <span class="k">WHERE</span> <span class="n">last_name</span> <span class="o">=</span> <span class="s1">&#39;张飞&#39;</span><span class="p">;</span>		<span class="c1">#修改成功，原表也会修改
+</span><span class="c1"></span>    
+    <span class="k">UPDATE</span> <span class="n">my_v2</span>
+    <span class="kt">SET</span> <span class="n">last_name</span> <span class="o">=</span> <span class="s1">&#39;张无忌&#39;</span>
+    <span class="k">WHERE</span> <span class="n">last_name</span> <span class="o">=</span> <span class="s1">&#39;张飞&#39;</span><span class="p">;</span>		<span class="c1">#修改成功，原表也会修改
+</span><span class="c1"></span>
+<span class="c1"># 3、删除
+</span><span class="c1"></span>	<span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">my_v1</span> <span class="k">WHERE</span> <span class="n">last_name</span> <span class="o">=</span> <span class="s1">&#39;张无忌&#39;</span><span class="p">;</span>		<span class="c1">#删除成功，原表也会修改
+</span><span class="c1"></span>	<span class="k">DELETE</span> <span class="k">FROM</span> <span class="n">my_v2</span> <span class="k">WHERE</span> <span class="n">last_name</span> <span class="o">=</span> <span class="s1">&#39;张无忌&#39;</span><span class="p">;</span> 		<span class="c1">#删除成功，原表也会修改</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>视图的可更新性和视图中查询的定义有关，以下类型的视图是不能更新的：（基本没有应用场所）</p>
+
+<ul>
+<li>包含以下关键字的SQL语句：分组函数、DISTINCT、GROUP BY、HAVING、UNION或者UNION ALL</li>
+<li>常量视图</li>
+<li>SELECT 中包含子查询</li>
+<li>JOIN</li>
+<li>FROM 一个不能更新的视图</li>
+<li>WHERE子句的子查询引用了FROM子句中的表</li>
+</ul>
+
+<h2 id="五-练习">五、练习</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1"># 1、创建视图emp_v1,要求查询电话号码以&#39;011&#39;开头的员工姓名和工资、邮箱
+</span><span class="c1"></span><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="n">VIEW</span> <span class="n">emp_v1</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="n">email</span>
+<span class="k">FROM</span> <span class="n">employees</span>
+<span class="k">WHERE</span> <span class="n">phone_number</span> <span class="k">LIKE</span> <span class="s1">&#39;011%&#39;</span><span class="p">;</span>
+
+<span class="c1"># 2、创建视图emp_v2，要求查询部门的最高工资高于12000的部门信息
+</span><span class="c1"></span><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="n">VIEW</span> <span class="n">emp_v2</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span> <span class="n">department_id</span><span class="p">,</span> <span class="nf">MAX</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">AS</span> <span class="s1">&#39;mx_dep&#39;</span>
+<span class="k">FROM</span> <span class="n">employees</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">department_id</span>
+<span class="k">HAVING</span> <span class="nf">MAX</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">12000</span><span class="p">;</span>
+
+<span class="k">SELECT</span> <span class="n">d</span><span class="p">.</span><span class="o">*</span><span class="p">,</span> <span class="n">v</span><span class="p">.</span><span class="n">mx_dep</span>
+<span class="k">FROM</span> <span class="n">departments</span> <span class="n">d</span>
+<span class="k">JOIN</span> <span class="n">emp_v2</span> <span class="n">v</span>
+<span class="k">ON</span> <span class="n">d</span><span class="p">.</span><span class="n">department_id</span><span class="o">=</span> <span class="n">v</span><span class="p">.</span><span class="n">department_id</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="六-测试题">六、测试题</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1"># 1、创建Book表，字段如下：
+</span><span class="c1"></span><span class="cm">/*
+</span><span class="cm">	bid 整型，主键
+</span><span class="cm">    bname 字符型，唯一键，非空
+</span><span class="cm">    price 浮点型，默认值 10
+</span><span class="cm">    btypeId 类型编号，引用bookType表的id字段（外键）
+</span><span class="cm">    
+</span><span class="cm">*/</span>
+
+<span class="c1"># 已知bookType表（不用创建），字段如下：id, name
+</span><span class="c1"></span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="nf">Book</span><span class="p">(</span>
+	<span class="n">bid</span> <span class="kt">INT</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+    <span class="n">bname</span> <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">UNIQUE</span> <span class="k">NOT</span> <span class="no">NULL</span><span class="p">,</span>
+    <span class="n">price</span> <span class="kt">FLOAT</span> <span class="k">DEFAULT</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="n">btypeId</span> <span class="kt">INT</span><span class="p">,</span>
+    <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="n">btypeId</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="nf">bookType</span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="c1"># 2、开启事务，向表中插入1行数据，并结束
+</span><span class="c1"></span><span class="kt">SET</span> <span class="n">AUTOCOMMIT</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">START</span> <span class="n">TRANSACTION</span><span class="p">;</span>
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">Book</span> <span class="k">VALUES</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;C语言&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">COMMIT</span><span class="p">;</span>
+
+<span class="c1"># 3、创建视图，实现查询价格大于100的书名和类型名
+</span><span class="c1"></span><span class="k">CREATE</span> <span class="n">VIEW</span> <span class="n">my_v1</span>
+<span class="k">AS</span>
+<span class="k">SELECT</span> <span class="n">bname</span><span class="p">,</span> <span class="n">name</span>
+<span class="k">FROM</span> <span class="n">book</span> <span class="n">b</span>
+<span class="k">JOIN</span> <span class="n">bookType</span> <span class="n">t</span>
+<span class="k">ON</span> <span class="n">b</span><span class="p">.</span><span class="n">btypeId</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">id</span>
+<span class="k">WHERE</span> <span class="n">price</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">;</span>
+
+<span class="c1"># 4、修改视图，实现查询价格在90-120之间的书名和价格
+</span><span class="c1"></span><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="n">VIEW</span> <span class="n">my_v1</span>
+<span class="k">AS</span> 
+<span class="k">SELECT</span> <span class="n">bname</span><span class="p">,</span> <span class="n">price</span>
+<span class="k">FROM</span> <span class="n">book</span>
+<span class="k">WHERE</span> <span class="n">price</span> <span class="k">BETWEEN</span> <span class="mi">90</span> <span class="k">AND</span> <span class="mi">120</span><span class="p">;</span>
+
+<span class="c1"># 5、删除刚才建的视图
+</span><span class="c1"></span><span class="k">DROP</span> <span class="n">VIEW</span> <span class="n">my_v1</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
     </div>
 
     
@@ -666,7 +858,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-      2019-10-25
+      2019-11-02
       
     </span>
   </p>
@@ -701,14 +893,14 @@
     <footer class="post-footer">
       <div class="post-tags">
           <a href="http://yulingqiu.github.io/tags/mysql/">MySQL</a>
-          <a href="http://yulingqiu.github.io/tags/%E9%A1%B9%E7%9B%AE/">项目</a>
+          <a href="http://yulingqiu.github.io/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
           
         </div>
 
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/mysql_notes_01/">
+          <a class="prev" href="/post/mysql_notes_08/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -718,12 +910,12 @@
 </svg>
 
             </i>
-            <span class="prev-text nav-default">MySQL笔记-01查询</span>
+            <span class="prev-text nav-default">MySQL笔记-08变量</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
-          <a class="next" href="/post/data_analysis_model/">
-            <span class="next-text nav-default">常用数据分析模型</span>
+          <a class="next" href="/post/mysql_notes_00/">
+            <span class="next-text nav-default">MySQL笔记-00基础篇</span>
             <span class="prev-text nav-mobile">下一篇</span>
             
             <i class="iconfont">
@@ -761,7 +953,7 @@
   <div id="disqus_thread"></div>
   <script type="text/javascript">
     var disqus_config = function () {
-      this.page.url = "http://yulingqiu.github.io/post/mysql_excel/";
+      this.page.url = "http://yulingqiu.github.io/post/mysql_notes_07/";
     };
     function load_disqus() {
       

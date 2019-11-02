@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>栖迟于一丘</title>
+  <title>MySQL笔记-08变量 - 栖迟于一丘</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="版权所有，转载请注明出处。工作请联系qiuyuling98@163.com" />
-  <meta name="description" content="Get up and get going!" />
+  <meta name="description" content="变量分为： 系统变量 全局变量（global） 会话变量（session） 自定义变量 用户变量 局部变量 1、系统变量 说明：系统变量由系统提供，不是由用" />
+
   <meta name="keywords" content="数据分析, Python, Office, 博客, 笔记" />
 
 
@@ -34,8 +35,8 @@
 <meta name="generator" content="Hugo 0.58.3" />
 
 
-<link rel="canonical" href="http://yulingqiu.github.io/" />
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="栖迟于一丘" />
+<link rel="canonical" href="http://yulingqiu.github.io/post/mysql_notes_08/" />
+
 
 
 
@@ -60,18 +61,26 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="栖迟于一丘" />
-<meta property="og:description" content="Get up and get going!" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://yulingqiu.github.io/" />
+<meta property="og:title" content="MySQL笔记-08变量" />
+<meta property="og:description" content="变量分为： 系统变量 全局变量（global） 会话变量（session） 自定义变量 用户变量 局部变量 1、系统变量 说明：系统变量由系统提供，不是由用" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://yulingqiu.github.io/post/mysql_notes_08/" />
+<meta property="article:published_time" content="2019-11-02T13:57:16+08:00" />
+<meta property="article:modified_time" content="2019-11-02T13:57:16+08:00" />
+<meta itemprop="name" content="MySQL笔记-08变量">
+<meta itemprop="description" content="变量分为： 系统变量 全局变量（global） 会话变量（session） 自定义变量 用户变量 局部变量 1、系统变量 说明：系统变量由系统提供，不是由用">
 
-<meta property="og:updated_time" content="2019-11-02T13:57:57+08:00" />
-<meta itemprop="name" content="栖迟于一丘">
-<meta itemprop="description" content="Get up and get going!">
 
+<meta itemprop="datePublished" content="2019-11-02T13:57:16&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-02T13:57:16&#43;08:00" />
+<meta itemprop="wordCount" content="1213">
+
+
+
+<meta itemprop="keywords" content="MySQL,笔记," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="栖迟于一丘"/>
-<meta name="twitter:description" content="Get up and get going!"/>
+<meta name="twitter:title" content="MySQL笔记-08变量"/>
+<meta name="twitter:description" content="变量分为： 系统变量 全局变量（global） 会话变量（session） 自定义变量 用户变量 局部变量 1、系统变量 说明：系统变量由系统提供，不是由用"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -219,7 +228,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -288,232 +297,542 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="posts" class="posts">
-  
-  
+          <article class="post bg-white">
     
-  
-  
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
+    <header class="post-header">
+      <h1 class="post-title">MySQL笔记-08变量</h1>
       
-      <a class="post-link" href="/post/mysql_notes_09/">MySQL笔记-09存储过程和函数</a>
-    </h1>
+      <div class="post-meta">
+        <time datetime="2019-11-02" class="post-time">
+          2019-11-02
+        </time>
+        <div class="post-category">
+            <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
+            
+          </div>
+        <span class="more-meta"> 约 1213 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+
+        
+        
+
+        
+        
+          <span id="/post/mysql_notes_08/" class="leancloud_visitors" data-flag-title="MySQL笔记-08变量">
+            <span class="post-meta-item-text"> | 阅读 </span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+      </div>
+    </header>
+
     
-    <div class="post-meta">
-      <time datetime="2019-11-02" class="post-time">
-        2019-11-02
-      </time>
-      <div class="post-category">
-          <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#1-系统变量">1、系统变量</a></li>
+</ul></li>
+<li><a href="#①查看所有全局变量">①查看所有全局变量</a></li>
+<li><a href="#②查看部分全局变量">②查看部分全局变量</a></li>
+<li><a href="#③查看指定的全局变量的值">③查看指定的全局变量的值</a></li>
+<li><a href="#④为某个指定的全局变量赋值">④为某个指定的全局变量赋值</a></li>
+<li><a href="#①查看所有会话变量">①查看所有会话变量</a></li>
+<li><a href="#②查看部分会话变量">②查看部分会话变量</a></li>
+<li><a href="#③查看指定的会话变量的值">③查看指定的会话变量的值</a></li>
+<li><a href="#④为某个指定的会话变量赋值">④为某个指定的会话变量赋值</a></li>
+<li><a href="#方式1">方式1：</a></li>
+<li><a href="#方式2">方式2：</a></li>
+<li><a href="#①声明并初始化">①声明并初始化</a></li>
+<li><a href="#②赋值-更新用户变量的值">②赋值（更新用户变量的值）</a></li>
+<li><a href="#③使用-查看用户变量的值">③使用（查看用户变量的值）</a></li>
+<li><a href="#①-声明">① 声明</a></li>
+<li><a href="#②赋值">②赋值</a></li>
+<li><a href="#③使用">③使用</a></li>
+<li><a href="#案例-声明2个变量并赋初始值-求和-并打印">案例:声明2个变量并赋初始值，求和，并打印</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<p>变量分为：</p>
+
+<ul>
+<li>系统变量
+
+<ul>
+<li>全局变量（global）</li>
+<li>会话变量（session）</li>
+</ul></li>
+<li>自定义变量
+
+<ul>
+<li>用户变量</li>
+<li>局部变量</li>
+</ul></li>
+</ul>
+
+<h2 id="1-系统变量">1、系统变量</h2>
+
+<p>说明：系统变量由系统提供，不是由用户定义，属于服务器层面。</p>
+
+<p>语法：</p>
+
+<p>1、查看所有的系统变量</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-SHOW GLOBAL|[SESSION] VARIABLES;```默认是SESSION" data-lang="SHOW GLOBAL|[SESSION] VARIABLES;```默认是SESSION"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-SHOW GLOBAL|[SESSION] VARIABLES;```默认是SESSION" data-lang="SHOW GLOBAL|[SESSION] VARIABLES;```默认是SESSION">2、查看满足条件的部分系统变量</code></pre></td></tr></table>
+</div>
+</div>
+<p>SHOW GLOBAL|[SESSION] VARIABLES LIKE &lsquo;%char%&rsquo;;```</p>
+
+<p>3、查看指定的某个系统变量的值</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-SELECT @@系统变量名;```" data-lang="SELECT @@系统变量名;```"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-SELECT @@系统变量名;```" data-lang="SELECT @@系统变量名;```">4、为某个系统变量赋值
+
+方式1：</code></pre></td></tr></table>
+</div>
+</div>
+<p>SET GLOBAL|[SESSION]系统变量名 = 值;```</p>
+
+<p>方式2：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-SET GLOBLA|[SESSION].系统变量名 = 值;```" data-lang="SET GLOBLA|[SESSION].系统变量名 = 值;```"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-SET GLOBLA|[SESSION].系统变量名 = 值;```" data-lang="SET GLOBLA|[SESSION].系统变量名 = 值;```">注意：如果是全局级别，则需要加``` GLOBAL```，如果是会话级别，则需要加```SESSION```；如果不写，则默认为SESSION。
+
+### ①全局变量</code></pre></td></tr></table>
+</div>
+</div>
+<p>mysql
+/*
+    作用域：服务器每次启动将为所有的全局变量赋初始值，针对于所有的会话（连接）有效，但不能跨重启
+*/</p>
+
+<h1 id="①查看所有全局变量">①查看所有全局变量</h1>
+
+<p>SHOW GLOBAL VARIABLES;</p>
+
+<h1 id="②查看部分全局变量">②查看部分全局变量</h1>
+
+<p>SHOW GLOBAL VARIABLES LIKE &lsquo;%char%&rsquo;;</p>
+
+<h1 id="③查看指定的全局变量的值">③查看指定的全局变量的值</h1>
+
+<p>SELECT @@global.autocommit;
+SELECT @@global.tx_isolation;</p>
+
+<h1 id="④为某个指定的全局变量赋值">④为某个指定的全局变量赋值</h1>
+
+<p>SET @@global.autocommit = 1;  # 跨连接有效</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">### ②会话变量</pre></td></tr></table>
+</div>
+</div>
+<p>mysql
+/*
+    作用域：仅仅针对于当前会话（连接）有效
+*/</p>
+
+<h1 id="①查看所有会话变量">①查看所有会话变量</h1>
+
+<p>SHOW VARIABLES;
+SHOW SESSION VARIABLES;</p>
+
+<h1 id="②查看部分会话变量">②查看部分会话变量</h1>
+
+<p>SHOW VARIABLES LIKE &lsquo;%char%&rsquo;;
+SHOW SESSION VARIABLES LIKE &lsquo;%char%&rsquo;;</p>
+
+<h1 id="③查看指定的会话变量的值">③查看指定的会话变量的值</h1>
+
+<p>SELECT @@tx_isolation;
+SELECT @@session.tx_isolation;</p>
+
+<h1 id="④为某个指定的会话变量赋值">④为某个指定的会话变量赋值</h1>
+
+<h1 id="方式1">方式1：</h1>
+
+<p>SET @@tx_isolation = &lsquo;read-uncommited&rsquo;;
+SET @@SESSION.tx_isolation = &lsquo;read-uncommitted&rsquo;;</p>
+
+<h1 id="方式2">方式2：</h1>
+
+<p>SET tx_isolation = &lsquo;read-committed&rsquo;;
+SET SESSION tx_isolation = &lsquo;read-committed&rsquo;;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">## 2、自定义变量
+
+说明：自定义变量是用户自定义的，不是由系统定义的
+
+使用步骤：声明——赋值——使用（查看、比较、运算等）
+
+### ①用户变量</pre></td></tr></table>
+</div>
+</div>
+<p>MYSQL
+/*
+    作用域：针对于当前会话（连接）有效，和会话变量的作用域相同
+    应用在任何地方，也就是BEGIN …… END 里面或者外面
+*/</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">赋值的操作符：  ```=``` 或``` :=```</pre></td></tr></table>
+</div>
+</div>
+<p>mysql</p>
+
+<h1 id="①声明并初始化">①声明并初始化</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">#方法一：
+    #SET @用户变量名 = 值;
+#方法二：
+    #SET @用户变量名 := 值
+#方式三：
+    # SELECT @用户变量名 := 值;</pre></td></tr></table>
+</div>
+</div>
+<h1 id="②赋值-更新用户变量的值">②赋值（更新用户变量的值）</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">#方式一：通过SET 或 SEECT 
+    # SET @用户变量名 = 值;
+    # SET @用户变量名 := 值
+    # SELECT @用户变量名 := 值;
+    # 案例：
+        SET @name = &#39;john&#39;;
+        SET @name = 100;
+# 方式二：通过 SELECT INTO
+    /*
+        SELECT 字段 INTO @变量名
+        FROM 表
+    */
+    # 案例：
+        SET @count = 1;
+        SELECT COUNT(*) INTO @count
+        FROM employees;</pre></td></tr></table>
+</div>
+</div>
+<h1 id="③使用-查看用户变量的值">③使用（查看用户变量的值）</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># SELECT @用户变量名;
+# 案例:
+    SELECT @count;</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">### ②局部变量</pre></td></tr></table>
+</div>
+</div>
+<p>mysql
+/*
+    作用域：仅仅在定义它的BEGIN ……END中有效
+    应用在 BEGIN……END中，且只能是第一句话！！！！
+*/</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"></pre></td>
+<td class="lntd">
+<pre class="chroma"></pre></td></tr></table>
+</div>
+</div>
+<p>mysql</p>
+
+<h1 id="①-声明">① 声明</h1>
+
+<p>DECLARE 变量名 类型；
+DECLARE 变量名 类型 DEFAULT 值；</p>
+
+<h1 id="②赋值">②赋值</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 方式1：通过SET 或 SELECT 
+    SET 局部变量名 = 值;
+    SET 局部变量名 := 值;
+    SELECT @局部变量名 := 值;
+# 方式2：通 SELECT INTO
+    SELECT 字段 INTO 局部变量名
+    FROM 表;</pre></td></tr></table>
+</div>
+</div>
+<h1 id="③使用">③使用</h1>
+
+<p>SELECT 局部变量名;</p>
+
+<h1 id="案例-声明2个变量并赋初始值-求和-并打印">案例:声明2个变量并赋初始值，求和，并打印</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># 1、用户变量
+    SET @m := 1;
+    SET @n := 2;
+    SET @sum := @m + @n;
+    SELECT @sum;
+# 2、局部变量(报错，需放在BEGIN……END中)
+    DECLARE m INT DAFAULT 1;
+    DECLARE n INT DEFAULT 2;
+    DECLARE sum INT;
+    SET sum = m + n;
+    SELECT sum;</pre></td></tr></table>
+</div>
+</div>
+<p>```</p>
+
+<p>对比用户变量和局部变量：</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>作用域</th>
+<th>定义和使用的位置</th>
+<th>语法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>用户变量</td>
+<td>当前会话</td>
+<td>会话中的任何地方</td>
+<td>必须加上@符号；不用限定类型</td>
+</tr>
+
+<tr>
+<td>局部变量</td>
+<td>BEGIN……END中</td>
+<td>只能在BEGIN……END中，且为第一句话</td>
+<td>一般不用加@符号；需要限定类型</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">版权所有，转载请注明出处。工作请联系qiuyuling98@163.com</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2019-11-02
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content">原创文章，如需转载请注明文章作者和出处。谢谢！</span>
+  </p>
+</div>
+
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/reward_wechat.png">
+        <span>微信打赏</span>
+      </label>
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/reward_alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://yulingqiu.github.io/tags/mysql/">MySQL</a>
+          <a href="http://yulingqiu.github.io/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
           
         </div>
-      <span class="more-meta"> 约 1136 字 </span>
-      <span class="more-meta"> 预计阅读 3 分钟 </span>
+
       
-      
-      
-        <span id="/post/mysql_notes_09/" class="leancloud_visitors" data-flag-title="MySQL笔记-09存储过程和函数">
-          <span class="post-meta-item-text"> | 阅读 </span>
-          <span class="leancloud-visitors-count"></span>
-        </span>
-      
-    </div>
-  </header>
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/mysql_notes_09/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">MySQL笔记-09存储过程和函数</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/mysql_notes_07/">
+            <span class="next-text nav-default">MySQL笔记-07视图</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
   
-  <div class="post-content">
-    
-    <div class="post-summary">
-      存储过程和函数：类似于Java中的方法 好处： 提高代码的重用性 简化操作 提高效率：减少编译次数；减少和数据库服务器的连接次数 存储过程（需要在命令
-    </div>
-    <div class="read-more">
-      <a href="/post/mysql_notes_09/" class="read-more-link">阅读全文</a>
-    </div>
-    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  <div class="disqus-comment">
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+    显示 Disqus 评论
   </div>
-</article>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "http://yulingqiu.github.io/post/mysql_notes_08/";
+    };
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
 
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'yuling';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/mysql_notes_08/">MySQL笔记-08变量</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-11-02" class="post-time">
-        2019-11-02
-      </time>
-      <div class="post-category">
-          <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
-          
-        </div>
-      <span class="more-meta"> 约 1213 字 </span>
-      <span class="more-meta"> 预计阅读 3 分钟 </span>
-      
-      
-      
-        <span id="/post/mysql_notes_08/" class="leancloud_visitors" data-flag-title="MySQL笔记-08变量">
-          <span class="post-meta-item-text"> | 阅读 </span>
-          <span class="leancloud-visitors-count"></span>
-        </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      变量分为： 系统变量 全局变量（global） 会话变量（session） 自定义变量 用户变量 局部变量 1、系统变量 说明：系统变量由系统提供，不是由用
-    </div>
-    <div class="read-more">
-      <a href="/post/mysql_notes_08/" class="read-more-link">阅读全文</a>
-    </div>
-    
   </div>
-</article>
 
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/mysql_notes_07/">MySQL笔记-07视图</a>
-    </h1>
     
-    <div class="post-meta">
-      <time datetime="2019-11-02" class="post-time">
-        2019-11-02
-      </time>
-      <div class="post-category">
-          <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
-          
-        </div>
-      <span class="more-meta"> 约 1705 字 </span>
-      <span class="more-meta"> 预计阅读 4 分钟 </span>
-      
-      
-      
-        <span id="/post/mysql_notes_07/" class="leancloud_visitors" data-flag-title="MySQL笔记-07视图">
-          <span class="post-meta-item-text"> | 阅读 </span>
-          <span class="leancloud-visitors-count"></span>
-        </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      视图含义： 一种虚拟存在的表，行和列是数据来自定义视图的查询中使用的表，并且是在使用视图时动态生成的，只保存了SQL逻辑，不保存查询结果。 应用
-    </div>
-    <div class="read-more">
-      <a href="/post/mysql_notes_07/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
 
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/mysql_notes_00/">MySQL笔记-00基础篇</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-11-02" class="post-time">
-        2019-11-02
-      </time>
-      <div class="post-category">
-          <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
-          
-        </div>
-      <span class="more-meta"> 约 928 字 </span>
-      <span class="more-meta"> 预计阅读 2 分钟 </span>
-      
-      
-      
-        <span id="/post/mysql_notes_00/" class="leancloud_visitors" data-flag-title="MySQL笔记-00基础篇">
-          <span class="post-meta-item-text"> | 阅读 </span>
-          <span class="leancloud-visitors-count"></span>
-        </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      一、基本概念 1、数据库的好处 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念 DB(da
-    </div>
-    <div class="read-more">
-      <a href="/post/mysql_notes_00/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-</section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
-      
-      <li  class="active" >
-        <a href="/">1</a>
-      </li>
-      
-      <li >
-        <a href="/page/2/">2</a>
-      </li>
-      
-      <li >
-        <a href="/page/3/">3</a>
-      </li>
-      
-      <li >
-        <a href="/page/4/">4</a>
-      </li>
-      
-      <li >
-        <a href="/page/5/">5</a>
-      </li>
-      
-    </ul>
-  </nav>
-
-  
-  
-
-
-
-
 
         </div>
       </div>

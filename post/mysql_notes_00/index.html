@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>栖迟于一丘</title>
+  <title>MySQL笔记-00基础篇 - 栖迟于一丘</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="版权所有，转载请注明出处。工作请联系qiuyuling98@163.com" />
-  <meta name="description" content="Get up and get going!" />
+  <meta name="description" content="一、基本概念 1、数据库的好处 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念 DB(da" />
+
   <meta name="keywords" content="数据分析, Python, Office, 博客, 笔记" />
 
 
@@ -34,8 +35,8 @@
 <meta name="generator" content="Hugo 0.58.3" />
 
 
-<link rel="canonical" href="http://yulingqiu.github.io/" />
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="栖迟于一丘" />
+<link rel="canonical" href="http://yulingqiu.github.io/post/mysql_notes_00/" />
+
 
 
 
@@ -60,18 +61,26 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="栖迟于一丘" />
-<meta property="og:description" content="Get up and get going!" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://yulingqiu.github.io/" />
+<meta property="og:title" content="MySQL笔记-00基础篇" />
+<meta property="og:description" content="一、基本概念 1、数据库的好处 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念 DB(da" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://yulingqiu.github.io/post/mysql_notes_00/" />
+<meta property="article:published_time" content="2019-11-02T13:51:46+08:00" />
+<meta property="article:modified_time" content="2019-11-02T13:51:46+08:00" />
+<meta itemprop="name" content="MySQL笔记-00基础篇">
+<meta itemprop="description" content="一、基本概念 1、数据库的好处 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念 DB(da">
 
-<meta property="og:updated_time" content="2019-11-02T13:57:57+08:00" />
-<meta itemprop="name" content="栖迟于一丘">
-<meta itemprop="description" content="Get up and get going!">
 
+<meta itemprop="datePublished" content="2019-11-02T13:51:46&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-02T13:51:46&#43;08:00" />
+<meta itemprop="wordCount" content="928">
+
+
+
+<meta itemprop="keywords" content="MySQL,笔记," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="栖迟于一丘"/>
-<meta name="twitter:description" content="Get up and get going!"/>
+<meta name="twitter:title" content="MySQL笔记-00基础篇"/>
+<meta name="twitter:description" content="一、基本概念 1、数据库的好处 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念 DB(da"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -219,7 +228,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -288,232 +297,456 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="posts" class="posts">
-  
-  
+          <article class="post bg-white">
     
-  
-  
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
+    <header class="post-header">
+      <h1 class="post-title">MySQL笔记-00基础篇</h1>
       
-      <a class="post-link" href="/post/mysql_notes_09/">MySQL笔记-09存储过程和函数</a>
-    </h1>
+      <div class="post-meta">
+        <time datetime="2019-11-02" class="post-time">
+          2019-11-02
+        </time>
+        <div class="post-category">
+            <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
+            
+          </div>
+        <span class="more-meta"> 约 928 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+
+        
+        
+
+        
+        
+          <span id="/post/mysql_notes_00/" class="leancloud_visitors" data-flag-title="MySQL笔记-00基础篇">
+            <span class="post-meta-item-text"> | 阅读 </span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+      </div>
+    </header>
+
     
-    <div class="post-meta">
-      <time datetime="2019-11-02" class="post-time">
-        2019-11-02
-      </time>
-      <div class="post-category">
-          <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#一-基本概念">一、基本概念</a>
+<ul>
+<li><a href="#1-数据库的好处">1、数据库的好处</a></li>
+<li><a href="#2-数据库的概念">2、数据库的概念</a></li>
+<li><a href="#3-sql的优点">3、SQL的优点</a></li>
+</ul></li>
+<li><a href="#二-常见命令">二、常见命令</a>
+<ul>
+<li><a href="#1-mysql位置">1、MySQL位置</a></li>
+<li><a href="#2-查看当前mysql版本">2、查看当前MySQL版本</a></li>
+<li><a href="#3-显示数据库">3、显示数据库</a></li>
+<li><a href="#4-打开指定的数据库">4、打开指定的数据库</a></li>
+<li><a href="#5-显示数据库中的表">5、显示数据库中的表</a></li>
+<li><a href="#6-查看当前所在数据库">6、查看当前所在数据库</a></li>
+<li><a href="#7-在当前所在数据库中创建表">7、在当前所在数据库中创建表</a>
+<ul>
+<li><a href="#1-常用数据类型">（1）常用数据类型：</a></li>
+<li><a href="#2-常用约束">（2）常用约束：</a></li>
+</ul></li>
+<li><a href="#8-显示表结构">8、显示表结构</a></li>
+<li><a href="#9-显示表中所有数据">9、显示表中所有数据</a></li>
+<li><a href="#10-插入数据到表中">10、插入数据到表中</a></li>
+<li><a href="#11-添加列">11、添加列</a></li>
+<li><a href="#12-删除列">12、删除列</a></li>
+<li><a href="#13-更新表数据">13、更新表数据</a></li>
+<li><a href="#14-删除表数据">14、删除表数据</a></li>
+<li><a href="#15-删除表">15、删除表</a></li>
+</ul></li>
+<li><a href="#三-语法规范">三、语法规范</a>
+<ul>
+<li>
+<ul>
+<li><a href="#sql的语言分类">SQL的语言分类</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h1 id="一-基本概念">一、基本概念</h1>
+
+<h2 id="1-数据库的好处">1、数据库的好处</h2>
+
+<ol>
+<li><p>持久化数据到本地：</p></li>
+
+<li><p>使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理）</p></li>
+</ol>
+
+<h2 id="2-数据库的概念">2、数据库的概念</h2>
+
+<p>DB(database)：数据库，存储数据的“仓库”，它保存了一系列有组织的数据。</p>
+
+<p>DBMS （Database Management System)：数据库管理系统，数据库是通过DBMS创建和操作的容器。常用的有：MySQL、Oracle、DB2、SqlServer等。</p>
+
+<p>SQL（Structure Query Language)：结构化查询语言，专门用来与数据库通信的语言。</p>
+
+<h2 id="3-sql的优点">3、SQL的优点</h2>
+
+<ol>
+<li>不是某个特定数据库供应商专有的语言，几乎所有DBMS都支持SQL</li>
+<li>简单易学：虽然简单，但实际上是一种强有力的语言，灵活使用其语言元素，可以进行非常复杂和高级的数据库操作。</li>
+</ol>
+
+<h1 id="二-常见命令">二、常见命令</h1>
+
+<h2 id="1-mysql位置">1、MySQL位置</h2>
+
+<p><code>C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin</code></p>
+
+<h2 id="2-查看当前mysql版本">2、查看当前MySQL版本</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">SELECT version();</pre></td></tr></table>
+</div>
+</div>
+<p>或者在cmd命令行里输入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">mysql --version
+或者
+mysql -V</pre></td></tr></table>
+</div>
+</div>
+<h2 id="3-显示数据库">3、显示数据库</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">SHOW</span> <span class="k">DATABASES</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="4-打开指定的数据库">4、打开指定的数据库</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">USE</span> <span class="err">库名</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="5-显示数据库中的表">5、显示数据库中的表</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">SHOW</span> <span class="kp">TABLES</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>或者</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">SHOW</span> <span class="kp">TABLES</span> <span class="k">FROM</span> <span class="err">库名</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="6-查看当前所在数据库">6、查看当前所在数据库</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">SELECT</span> <span class="k">DATABASE</span><span class="p">();</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="7-在当前所在数据库中创建表">7、在当前所在数据库中创建表</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="err">表名</span><span class="p">(</span>  
+	<span class="err">列</span><span class="mi">1</span><span class="err">名</span> <span class="err">列</span><span class="mi">1</span><span class="err">类型</span><span class="p">,</span>
+	<span class="err">列</span><span class="mi">2</span><span class="err">名</span> <span class="err">列</span><span class="mi">2</span><span class="err">类型</span>
+<span class="p">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="1-常用数据类型">（1）常用数据类型：</h3>
+
+<ul>
+<li>CHAR 字符串<br /></li>
+<li>VARCHAR 可变长度字符串<br /></li>
+<li>INTEGER 整数<br /></li>
+<li>日期</li>
+</ul>
+
+<h3 id="2-常用约束">（2）常用约束：</h3>
+
+<ul>
+<li>not null 非空值约束<br /></li>
+<li>default 默认约束<br /></li>
+
+<li><p>primary key 主键约束</p>
+
+<h2 id="8-显示表结构">8、显示表结构</h2>
+
+<p>mysql-&gt;DESC gpnu;
+或者
+mysql-&gt;DESCRIBE gpnu;</p></li>
+</ul>
+
+<h2 id="9-显示表中所有数据">9、显示表中所有数据</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">SELECT *FROM gpnu;</pre></td></tr></table>
+</div>
+</div>
+<h2 id="10-插入数据到表中">10、插入数据到表中</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">INSERT</span> <span class="k">INTO</span> <span class="nf">gpnu</span> <span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;john&#39;</span><span class="p">);</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">INSERT</span> <span class="k">INTO</span> <span class="nf">gpnu</span> <span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+<span class="k">VALUES</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Rose&#39;</span><span class="p">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="11-添加列">11、添加列</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">ALTER</span> <span class="k">table</span> <span class="err">表名</span> <span class="k">ADD</span> <span class="n">COLUMM</span> <span class="err">列名</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="12-删除列">12、删除列</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">ALTER</span> <span class="k">table</span> <span class="err">表名</span> <span class="k">DROP</span> <span class="k">COLUMN</span> <span class="err">列名</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="13-更新表数据">13、更新表数据</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">UPDATE</span> <span class="n">gpnu</span>
+<span class="kt">SET</span> <span class="n">name</span> <span class="o">=</span><span class="s1">&#39;Lilei&#39;</span>
+<span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="14-删除表数据">14、删除表数据</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="n">DELECT</span> <span class="k">FROM</span> <span class="n">gpnu</span>
+<span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span><span class="mi">1</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="15-删除表">15、删除表</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">DROP</span> <span class="k">table</span> <span class="err">表名</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="三-语法规范">三、语法规范</h1>
+
+<ol>
+<li>不区分大小写，但建议关键字大写，表名，列名小写</li>
+<li>每条命令最好用分号;结尾</li>
+<li>每条命令根据需要，可以进行换行及缩进</li>
+<li>注释
+
+<ol>
+<li>单行注释: <code>#注释文字</code></li>
+<li>单行注释:<code>-- 注释文字</code></li>
+<li>多行注释:<code>/* 注释文字 */</code></li>
+</ol></li>
+</ol>
+
+<h3 id="sql的语言分类">SQL的语言分类</h3>
+
+<p>DQL（Data Query Language）：数据查询语言——select
+DML ( Data Manipulate Language): 数据操作语言——insert 、update、delete
+DDL（Data Define Languge）：数据定义语言——create、drop、alter
+TCL（Transaction Control Language）：事务控制语言——commit、rollback</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">版权所有，转载请注明出处。工作请联系qiuyuling98@163.com</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2019-11-02
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content">原创文章，如需转载请注明文章作者和出处。谢谢！</span>
+  </p>
+</div>
+
+
+    
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/reward_wechat.png">
+        <span>微信打赏</span>
+      </label>
+    
+      <label class="qr-code-image" for="reward">
+        <img class="image" src="/reward_alipay.jpg">
+        <span>支付宝打赏</span>
+      </label>
+  </div>
+</div>
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://yulingqiu.github.io/tags/mysql/">MySQL</a>
+          <a href="http://yulingqiu.github.io/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
           
         </div>
-      <span class="more-meta"> 约 1136 字 </span>
-      <span class="more-meta"> 预计阅读 3 分钟 </span>
+
       
-      
-      
-        <span id="/post/mysql_notes_09/" class="leancloud_visitors" data-flag-title="MySQL笔记-09存储过程和函数">
-          <span class="post-meta-item-text"> | 阅读 </span>
-          <span class="leancloud-visitors-count"></span>
-        </span>
-      
-    </div>
-  </header>
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/mysql_notes_07/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">MySQL笔记-07视图</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/post/mysql_notes_06/">
+            <span class="next-text nav-default">MySQL笔记-06TCL语句</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
   
-  <div class="post-content">
-    
-    <div class="post-summary">
-      存储过程和函数：类似于Java中的方法 好处： 提高代码的重用性 简化操作 提高效率：减少编译次数；减少和数据库服务器的连接次数 存储过程（需要在命令
-    </div>
-    <div class="read-more">
-      <a href="/post/mysql_notes_09/" class="read-more-link">阅读全文</a>
-    </div>
-    
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  <div class="disqus-comment">
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+    显示 Disqus 评论
   </div>
-</article>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "http://yulingqiu.github.io/post/mysql_notes_00/";
+    };
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
 
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'yuling';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/mysql_notes_08/">MySQL笔记-08变量</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-11-02" class="post-time">
-        2019-11-02
-      </time>
-      <div class="post-category">
-          <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
-          
-        </div>
-      <span class="more-meta"> 约 1213 字 </span>
-      <span class="more-meta"> 预计阅读 3 分钟 </span>
-      
-      
-      
-        <span id="/post/mysql_notes_08/" class="leancloud_visitors" data-flag-title="MySQL笔记-08变量">
-          <span class="post-meta-item-text"> | 阅读 </span>
-          <span class="leancloud-visitors-count"></span>
-        </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      变量分为： 系统变量 全局变量（global） 会话变量（session） 自定义变量 用户变量 局部变量 1、系统变量 说明：系统变量由系统提供，不是由用
-    </div>
-    <div class="read-more">
-      <a href="/post/mysql_notes_08/" class="read-more-link">阅读全文</a>
-    </div>
-    
   </div>
-</article>
 
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/mysql_notes_07/">MySQL笔记-07视图</a>
-    </h1>
     
-    <div class="post-meta">
-      <time datetime="2019-11-02" class="post-time">
-        2019-11-02
-      </time>
-      <div class="post-category">
-          <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
-          
-        </div>
-      <span class="more-meta"> 约 1705 字 </span>
-      <span class="more-meta"> 预计阅读 4 分钟 </span>
-      
-      
-      
-        <span id="/post/mysql_notes_07/" class="leancloud_visitors" data-flag-title="MySQL笔记-07视图">
-          <span class="post-meta-item-text"> | 阅读 </span>
-          <span class="leancloud-visitors-count"></span>
-        </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      视图含义： 一种虚拟存在的表，行和列是数据来自定义视图的查询中使用的表，并且是在使用视图时动态生成的，只保存了SQL逻辑，不保存查询结果。 应用
-    </div>
-    <div class="read-more">
-      <a href="/post/mysql_notes_07/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
 
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/mysql_notes_00/">MySQL笔记-00基础篇</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-11-02" class="post-time">
-        2019-11-02
-      </time>
-      <div class="post-category">
-          <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
-          
-        </div>
-      <span class="more-meta"> 约 928 字 </span>
-      <span class="more-meta"> 预计阅读 2 分钟 </span>
-      
-      
-      
-        <span id="/post/mysql_notes_00/" class="leancloud_visitors" data-flag-title="MySQL笔记-00基础篇">
-          <span class="post-meta-item-text"> | 阅读 </span>
-          <span class="leancloud-visitors-count"></span>
-        </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      一、基本概念 1、数据库的好处 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念 DB(da
-    </div>
-    <div class="read-more">
-      <a href="/post/mysql_notes_00/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-</section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
-      
-      <li  class="active" >
-        <a href="/">1</a>
-      </li>
-      
-      <li >
-        <a href="/page/2/">2</a>
-      </li>
-      
-      <li >
-        <a href="/page/3/">3</a>
-      </li>
-      
-      <li >
-        <a href="/page/4/">4</a>
-      </li>
-      
-      <li >
-        <a href="/page/5/">5</a>
-      </li>
-      
-    </ul>
-  </nav>
-
-  
-  
-
-
-
-
 
         </div>
       </div>

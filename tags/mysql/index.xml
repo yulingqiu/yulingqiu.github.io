@@ -5,10 +5,100 @@
     <link>http://yulingqiu.github.io/tags/mysql/</link>
     <description>Recent content in MySQL on 栖迟于一丘</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 25 Oct 2019 17:22:04 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 02 Nov 2019 13:57:57 +0800</lastBuildDate>
     
 	<atom:link href="http://yulingqiu.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MySQL笔记-09存储过程和函数</title>
+      <link>http://yulingqiu.github.io/post/mysql_notes_09/</link>
+      <pubDate>Sat, 02 Nov 2019 13:57:57 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_notes_09/</guid>
+      <description>存储过程和函数：类似于Java中的方法 好处： 提高代码的重用性 简化操作 提高效率：减少编译次数；减少和数据库服务器的连接次数 存储过程（需要在命令</description>
+    </item>
+    
+    <item>
+      <title>MySQL笔记-08变量</title>
+      <link>http://yulingqiu.github.io/post/mysql_notes_08/</link>
+      <pubDate>Sat, 02 Nov 2019 13:57:16 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_notes_08/</guid>
+      <description>变量分为： 系统变量 全局变量（global） 会话变量（session） 自定义变量 用户变量 局部变量 1、系统变量 说明：系统变量由系统提供，不是由用</description>
+    </item>
+    
+    <item>
+      <title>MySQL笔记-07视图</title>
+      <link>http://yulingqiu.github.io/post/mysql_notes_07/</link>
+      <pubDate>Sat, 02 Nov 2019 13:56:48 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_notes_07/</guid>
+      <description>视图含义： 一种虚拟存在的表，行和列是数据来自定义视图的查询中使用的表，并且是在使用视图时动态生成的，只保存了SQL逻辑，不保存查询结果。 应用</description>
+    </item>
+    
+    <item>
+      <title>MySQL笔记-00基础篇</title>
+      <link>http://yulingqiu.github.io/post/mysql_notes_00/</link>
+      <pubDate>Sat, 02 Nov 2019 13:51:46 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_notes_00/</guid>
+      <description>一、基本概念 1、数据库的好处 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念 DB(da</description>
+    </item>
+    
+    <item>
+      <title>MySQL笔记-06TCL语句</title>
+      <link>http://yulingqiu.github.io/post/mysql_notes_06/</link>
+      <pubDate>Sat, 02 Nov 2019 13:51:14 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_notes_06/</guid>
+      <description>TCL语句 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65</description>
+    </item>
+    
+    <item>
+      <title>MySQL笔记-05DDL语句</title>
+      <link>http://yulingqiu.github.io/post/mysql_notes_05/</link>
+      <pubDate>Sat, 02 Nov 2019 13:51:10 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_notes_05/</guid>
+      <description>DDL语句 1 2 3 4 5 6 7 8 9 10 11 /* 数据定义语言 库和表的管理 一、库的管理 创建、修改、删除 二、表的管理 创建、修改、删除 创建： CREATE 修改： ALTER 删除： DROP */</description>
+    </item>
+    
+    <item>
+      <title>MySQL笔记-04DML语句</title>
+      <link>http://yulingqiu.github.io/post/mysql_notes_04/</link>
+      <pubDate>Sat, 02 Nov 2019 13:51:07 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_notes_04/</guid>
+      <description>DML语句 1 2 3 4 5 6 /* 数据操作语言： 插入：INSERT 修改：UPDATE 删除：DELETE */ 1、插入语句 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17</description>
+    </item>
+    
+    <item>
+      <title>MySQL笔记-03查询</title>
+      <link>http://yulingqiu.github.io/post/mysql_notes_03/</link>
+      <pubDate>Sat, 02 Nov 2019 13:51:04 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_notes_03/</guid>
+      <description>DQL语句 子查询 总述 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 /* 含义： 出现在其他语句中的select语句，称为子查询或内查询 外部的查询语</description>
+    </item>
+    
+    <item>
+      <title>MySQ笔记-02查询</title>
+      <link>http://yulingqiu.github.io/post/mysql_notes_02/</link>
+      <pubDate>Sat, 02 Nov 2019 13:51:00 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_notes_02/</guid>
+      <description>DQL语句 分组查询 讲解 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59</description>
+    </item>
+    
+    <item>
+      <title>MySQL笔记-01查询</title>
+      <link>http://yulingqiu.github.io/post/mysql_notes_01/</link>
+      <pubDate>Sat, 02 Nov 2019 13:50:54 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_notes_01/</guid>
+      <description>DQL语句 基础查询 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61</description>
+    </item>
     
     <item>
       <title>MySQL公司员工分析过程</title>
@@ -29,11 +119,11 @@
     </item>
     
     <item>
-      <title>MySQL入门</title>
-      <link>http://yulingqiu.github.io/post/mysql-notes/</link>
+      <title>MySQL笔记——00基础篇</title>
+      <link>http://yulingqiu.github.io/post/mysql-notes-00/</link>
       <pubDate>Thu, 10 Oct 2019 19:29:56 +0800</pubDate>
       
-      <guid>http://yulingqiu.github.io/post/mysql-notes/</guid>
+      <guid>http://yulingqiu.github.io/post/mysql-notes-00/</guid>
       <description>一、基本概念 1、数据库的好处： 持久化数据到本地： 使用完整的管理系统统一管理，易于查询（可以实现结构化查询，方便管理） 2、数据库的概念： DB(</description>
     </item>
     
