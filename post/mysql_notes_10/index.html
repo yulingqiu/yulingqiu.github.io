@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>MySQL笔记-08变量 - 栖迟于一丘</title>
+  <title>MySQ笔记-10流程控制结构 - 栖迟于一丘</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="版权所有，转载请注明出处。工作请联系qiuyuling98@163.com" />
-  <meta name="description" content="变量分为： 系统变量：服务器层面上的，必须拥有super权限才能为系统变量赋值 全局变量（global） 会话变量（session） 自定义变量 用户" />
+  <meta name="description" content="流程控制结构分为： 顺序结构：程序从上往下依次执行 分支结构：程序从两条或多条路径中选择一条去执行 循环结构：程序在满足一定条件的基础上，重复执行" />
 
   <meta name="keywords" content="数据分析, Python, Office, 博客, 笔记" />
 
@@ -35,7 +35,7 @@
 <meta name="generator" content="Hugo 0.58.3" />
 
 
-<link rel="canonical" href="http://yulingqiu.github.io/post/mysql_notes_08/" />
+<link rel="canonical" href="http://yulingqiu.github.io/post/mysql_notes_10/" />
 
 
 
@@ -61,26 +61,26 @@
 <link rel="stylesheet" href="/css/custom.css">
 
 
-<meta property="og:title" content="MySQL笔记-08变量" />
-<meta property="og:description" content="变量分为： 系统变量：服务器层面上的，必须拥有super权限才能为系统变量赋值 全局变量（global） 会话变量（session） 自定义变量 用户" />
+<meta property="og:title" content="MySQ笔记-10流程控制结构" />
+<meta property="og:description" content="流程控制结构分为： 顺序结构：程序从上往下依次执行 分支结构：程序从两条或多条路径中选择一条去执行 循环结构：程序在满足一定条件的基础上，重复执行" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://yulingqiu.github.io/post/mysql_notes_08/" />
-<meta property="article:published_time" content="2019-11-02T13:57:16+08:00" />
-<meta property="article:modified_time" content="2019-11-02T13:57:16+08:00" />
-<meta itemprop="name" content="MySQL笔记-08变量">
-<meta itemprop="description" content="变量分为： 系统变量：服务器层面上的，必须拥有super权限才能为系统变量赋值 全局变量（global） 会话变量（session） 自定义变量 用户">
+<meta property="og:url" content="http://yulingqiu.github.io/post/mysql_notes_10/" />
+<meta property="article:published_time" content="2019-11-03T10:08:25+08:00" />
+<meta property="article:modified_time" content="2019-11-03T10:08:25+08:00" />
+<meta itemprop="name" content="MySQ笔记-10流程控制结构">
+<meta itemprop="description" content="流程控制结构分为： 顺序结构：程序从上往下依次执行 分支结构：程序从两条或多条路径中选择一条去执行 循环结构：程序在满足一定条件的基础上，重复执行">
 
 
-<meta itemprop="datePublished" content="2019-11-02T13:57:16&#43;08:00" />
-<meta itemprop="dateModified" content="2019-11-02T13:57:16&#43;08:00" />
-<meta itemprop="wordCount" content="1246">
+<meta itemprop="datePublished" content="2019-11-03T10:08:25&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-03T10:08:25&#43;08:00" />
+<meta itemprop="wordCount" content="1801">
 
 
 
 <meta itemprop="keywords" content="MySQL,笔记," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MySQL笔记-08变量"/>
-<meta name="twitter:description" content="变量分为： 系统变量：服务器层面上的，必须拥有super权限才能为系统变量赋值 全局变量（global） 会话变量（session） 自定义变量 用户"/>
+<meta name="twitter:title" content="MySQ笔记-10流程控制结构"/>
+<meta name="twitter:description" content="流程控制结构分为： 顺序结构：程序从上往下依次执行 分支结构：程序从两条或多条路径中选择一条去执行 循环结构：程序在满足一定条件的基础上，重复执行"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -300,25 +300,25 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">MySQL笔记-08变量</h1>
+      <h1 class="post-title">MySQ笔记-10流程控制结构</h1>
       
       <div class="post-meta">
-        <time datetime="2019-11-02" class="post-time">
-          2019-11-02
+        <time datetime="2019-11-03" class="post-time">
+          2019-11-03
         </time>
         <div class="post-category">
             <a href="http://yulingqiu.github.io/categories/mysql/"> MySQL </a>
             
           </div>
-        <span class="more-meta"> 约 1246 字 </span>
-          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span class="more-meta"> 约 1801 字 </span>
+          <span class="more-meta"> 预计阅读 4 分钟 </span>
 
         
         
 
         
         
-          <span id="/post/mysql_notes_08/" class="leancloud_visitors" data-flag-title="MySQL笔记-08变量">
+          <span id="/post/mysql_notes_10/" class="leancloud_visitors" data-flag-title="MySQ笔记-10流程控制结构">
             <span class="post-meta-item-text"> | 阅读 </span>
             <span class="leancloud-visitors-count"></span>
           </span>
@@ -335,25 +335,34 @@
 <ul>
 <li>
 <ul>
-<li><a href="#1-系统变量">1、系统变量</a></li>
+<li><a href="#一-分支结构">一、分支结构</a>
+<ul>
+<li><a href="#1-if-函数">1、IF 函数</a></li>
+<li><a href="#2-case结构">2、CASE结构</a>
+<ul>
+<li><a href="#情况1">情况1：</a></li>
+<li><a href="#情况2">情况2：</a></li>
+<li><a href="#特点">特点：</a></li>
+<li><a href="#案例">案例</a></li>
 </ul></li>
-<li><a href="#①查看所有全局变量">①查看所有全局变量</a></li>
-<li><a href="#②查看部分全局变量">②查看部分全局变量</a></li>
-<li><a href="#③查看指定的全局变量的值">③查看指定的全局变量的值</a></li>
-<li><a href="#④为某个指定的全局变量赋值">④为某个指定的全局变量赋值</a></li>
-<li><a href="#①查看所有会话变量">①查看所有会话变量</a></li>
-<li><a href="#②查看部分会话变量">②查看部分会话变量</a></li>
-<li><a href="#③查看指定的会话变量的值">③查看指定的会话变量的值</a></li>
-<li><a href="#④为某个指定的会话变量赋值">④为某个指定的会话变量赋值</a></li>
-<li><a href="#方式1">方式1：</a></li>
-<li><a href="#方式2">方式2：</a></li>
-<li><a href="#①声明并初始化">①声明并初始化</a></li>
-<li><a href="#②赋值-更新用户变量的值">②赋值（更新用户变量的值）</a></li>
-<li><a href="#③使用-查看用户变量的值">③使用（查看用户变量的值）</a></li>
-<li><a href="#①-声明">① 声明</a></li>
-<li><a href="#②赋值">②赋值</a></li>
-<li><a href="#③使用">③使用</a></li>
-<li><a href="#案例-声明2个变量并赋初始值-求和-并打印">案例:声明2个变量并赋初始值，求和，并打印</a></li>
+<li><a href="#3-if-结构">3、IF 结构</a>
+<ul>
+<li><a href="#案例-1">案例</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#二-循环结构">二、循环结构</a>
+<ul>
+<li><a href="#分类">分类</a>
+<ul>
+<li><a href="#1-while">1、WHILE</a></li>
+<li><a href="#2-loop">2、LOOP</a></li>
+<li><a href="#3-repeat">3、REPEAT</a></li>
+</ul></li>
+<li><a href="#案例-2">案例</a></li>
+<li><a href="#总结">总结</a></li>
+</ul></li>
+<li><a href="#三-流程控制经典案例">三、流程控制经典案例</a></li>
+</ul></li>
 </ul>
 </nav>
   </div>
@@ -363,186 +372,284 @@
     <div class="post-content">
       
 
-<p>变量分为：</p>
+<p>流程控制结构分为：</p>
 
 <ul>
-<li>系统变量：服务器层面上的，必须拥有super权限才能为系统变量赋值
-
-<ul>
-<li>全局变量（global）</li>
-<li>会话变量（session）</li>
-</ul></li>
-<li>自定义变量
-
-<ul>
-<li>用户变量</li>
-<li>局部变量</li>
-</ul></li>
+<li>顺序结构：程序从上往下依次执行</li>
+<li>分支结构：程序从两条或多条路径中选择一条去执行</li>
+<li>循环结构：程序在满足一定条件的基础上，重复执行一段代码</li>
 </ul>
 
-<h2 id="1-系统变量">1、系统变量</h2>
+<h2 id="一-分支结构">一、分支结构</h2>
 
-<p>说明：系统变量由系统提供，不是由用户定义，属于服务器层面。</p>
+<h3 id="1-if-函数">1、IF 函数</h3>
+
+<p>功能：实现简单的双分支</p>
+
+<p>语法： IF(表达式1, 表达式2, 表达式3)</p>
+
+<p>执行顺序：如果表达式1成立，则IF函数返回表达式2的值，否则返回表达式3的值</p>
+
+<p>应用：任何地方（结合SELECT语句放在BEGIN …… EDN里/外）</p>
+
+<h3 id="2-case结构">2、CASE结构</h3>
+
+<h4 id="情况1">情况1：</h4>
+
+<p>类似于JAVA中的SWITCH结构，一般用于实现等值判断</p>
 
 <p>语法：</p>
 
-<p>1、查看所有的系统变量</p>
+<p>作为表达式（放在BEGIN END外）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-SHOW GLOBAL|[SESSION] VARIABLES;```" data-lang="SHOW GLOBAL|[SESSION] VARIABLES;```"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-SHOW GLOBAL|[SESSION] VARIABLES;```" data-lang="SHOW GLOBAL|[SESSION] VARIABLES;```">2、查看满足条件的部分系统变量</code></pre></td></tr></table>
-</div>
-</div>
-<p>SHOW GLOBAL|[SESSION] VARIABLES LIKE &lsquo;%char%&rsquo;;```</p>
-
-<p>3、查看指定的某个系统变量的值</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-SELECT @@global|[session]系统变量名;```" data-lang="SELECT @@global|[session]系统变量名;```"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-SELECT @@global|[session]系统变量名;```" data-lang="SELECT @@global|[session]系统变量名;```">4、为某个系统变量赋值
-
-方式1：</code></pre></td></tr></table>
-</div>
-</div>
-<p>SET GLOBAL|[SESSION]系统变量名 = 值;```</p>
-
-<p>方式2：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-SET @@GLOBAL|[SESSION].系统变量名 = 值;```" data-lang="SET @@GLOBAL|[SESSION].系统变量名 = 值;```"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-SET @@GLOBAL|[SESSION].系统变量名 = 值;```" data-lang="SET @@GLOBAL|[SESSION].系统变量名 = 值;```">注意：如果是全局级别，则需要加``` GLOBAL```，如果是会话级别，则需要加```SESSION```；如果不写，则默认为SESSION。
-
-### ①全局变量</code></pre></td></tr></table>
-</div>
-</div>
-<p>mysql
-/*
-    作用域：服务器每次启动将为所有的全局变量赋初始值，针对于所有的会话（连接）有效，但不能跨重启
-*/</p>
-
-<h1 id="①查看所有全局变量">①查看所有全局变量</h1>
-
-<p>SHOW GLOBAL VARIABLES;</p>
-
-<h1 id="②查看部分全局变量">②查看部分全局变量</h1>
-
-<p>SHOW GLOBAL VARIABLES LIKE &lsquo;%char%&rsquo;;</p>
-
-<h1 id="③查看指定的全局变量的值">③查看指定的全局变量的值</h1>
-
-<p>SELECT @@global.autocommit;
-SELECT @@global.tx_isolation;</p>
-
-<h1 id="④为某个指定的全局变量赋值">④为某个指定的全局变量赋值</h1>
-
-<p>SET @@global.autocommit = 1;  # 跨连接有效</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">### ②会话变量</pre></td></tr></table>
-</div>
-</div>
-<p>mysql
-/*
-    作用域：仅仅针对于当前会话（连接）有效
-*/</p>
-
-<h1 id="①查看所有会话变量">①查看所有会话变量</h1>
-
-<p>SHOW VARIABLES;
-SHOW SESSION VARIABLES;</p>
-
-<h1 id="②查看部分会话变量">②查看部分会话变量</h1>
-
-<p>SHOW VARIABLES LIKE &lsquo;%char%&rsquo;;
-SHOW SESSION VARIABLES LIKE &lsquo;%char%&rsquo;;</p>
-
-<h1 id="③查看指定的会话变量的值">③查看指定的会话变量的值</h1>
-
-<p>SELECT @@tx_isolation;
-SELECT @@session.tx_isolation;</p>
-
-<h1 id="④为某个指定的会话变量赋值">④为某个指定的会话变量赋值</h1>
-
-<h1 id="方式1">方式1：</h1>
-
-<p>SET @@tx_isolation = &lsquo;read-uncommited&rsquo;;
-SET @@SESSION.tx_isolation = &lsquo;read-uncommitted&rsquo;;</p>
-
-<h1 id="方式2">方式2：</h1>
-
-<p>SET tx_isolation = &lsquo;read-committed&rsquo;;
-SET SESSION tx_isolation = &lsquo;read-committed&rsquo;;</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span><span class="lnt">7
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">## 2、自定义变量
-
-说明：自定义变量是用户自定义的，不是由系统定义的
-
-使用步骤：声明——赋值——使用（查看、比较、运算等）
-
-### ①用户变量</pre></td></tr></table>
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">CASE</span> <span class="err">变量</span><span class="o">|</span><span class="err">表达式</span><span class="o">|</span><span class="err">字段</span>
+<span class="k">WHEN</span> <span class="err">要判断的值</span> <span class="k">THEN</span> <span class="err">返回值</span><span class="mi">1</span>
+<span class="k">WHEN</span> <span class="err">要判断的值</span> <span class="k">THEN</span> <span class="err">返回值</span><span class="mi">2</span>
+<span class="err">……</span>
+<span class="k">ELSE</span> <span class="err">要返回的值</span><span class="n">N</span>
+<span class="n">END</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>MYSQL
-/*
-    作用域：针对于当前会话（连接）有效，和会话变量的作用域相同
-    应用在任何地方，也就是BEGIN …… END 里面或者外面
-*/</p>
+<p>或作为独立的语句（放在BEGIN END里）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">赋值的操作符：  ```=``` 或``` :=```</pre></td></tr></table>
-</div>
-</div>
-<p>mysql</p>
-
-<h1 id="①声明并初始化">①声明并初始化</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">#方法一：
-    # SET @用户变量名 = 值;
-#方法二：
-    # SET @用户变量名 := 值;
-#方式三：
-    # SELECT @用户变量名 := 值;</pre></td></tr></table>
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">CASE</span> <span class="err">变量</span><span class="o">|</span><span class="err">表达式</span><span class="o">|</span><span class="err">字段</span>
+<span class="k">WHEN</span> <span class="err">要判断的值</span> <span class="k">THEN</span> <span class="err">语句</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">WHEN</span> <span class="err">要判断的值</span> <span class="k">THEN</span> <span class="err">语句</span><span class="mi">2</span><span class="p">;</span>
+<span class="err">……</span>
+<span class="k">ELSE</span> <span class="err">语句</span><span class="n">N</span><span class="p">;</span>
+<span class="n">END</span> <span class="k">CASE</span><span class="p">;</span></code></pre></td></tr></table>
 </div>
 </div>
-<h1 id="②赋值-更新用户变量的值">②赋值（更新用户变量的值）</h1>
+<h4 id="情况2">情况2：</h4>
+
+<p>类似于JAVA中的多重 IF 语句，一般用于实现区间判断</p>
+
+<p>语法：</p>
+
+<p>作为表达式</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">CASE</span> 
+<span class="k">WHEN</span> <span class="err">要判断的条件</span><span class="mi">1</span> <span class="k">THEN</span> <span class="err">返回值</span><span class="mi">1</span>
+<span class="k">WHEN</span> <span class="err">要判断的条件</span><span class="mi">2</span> <span class="k">THEN</span> <span class="err">返回值</span><span class="mi">2</span>
+<span class="err">……</span>
+<span class="k">ELSE</span> <span class="err">要返回的值</span><span class="n">N</span>
+<span class="n">END</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>或作为独立的语句</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">CASE</span> 
+<span class="k">WHEN</span> <span class="err">要判断的条件</span><span class="mi">1</span> <span class="k">THEN</span> <span class="err">语句</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">WHEN</span> <span class="err">要判断的条件</span><span class="mi">2</span> <span class="k">THEN</span> <span class="err">语句</span><span class="mi">2</span><span class="p">;</span>
+<span class="err">……</span>
+<span class="k">ELSE</span> <span class="err">语句</span><span class="n">N</span><span class="p">;</span>
+<span class="n">END</span> <span class="k">CASE</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="特点">特点：</h4>
+
+<ul>
+<li>可以作为表达式，嵌套在其他语句中使用，可以放在任何地方，BEGIN END中或BEGIN END 外</li>
+<li>可以作为独立的语句去使用，只能放在BEGIN END中</li>
+<li>如果WHEN中的值满足或条件成立，则执行对应的THEN后面的语句，并且结束CASE</li>
+<li>如果都不满足，则执行ELSE中的语句或值</li>
+<li>ELSE可以省略，如果ELSE省略了，并且所有的WHEN条件都不满足，则返回NULL</li>
+</ul>
+
+<h4 id="案例">案例</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1"># 创建存储过程，根据传入的成绩，来显示等级，比如传入的成绩：90-100显示A，80-90显示B，60-80显示C，否则显示D
+</span><span class="c1"></span>    <span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="nf">test_case</span><span class="p">(</span><span class="k">IN</span> <span class="n">score</span> <span class="kt">INT</span><span class="p">)</span>
+    <span class="n">BEGIN</span>
+        <span class="k">CASE</span> 
+        <span class="k">WHEN</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span>  <span class="k">AND</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">100</span> <span class="k">THEN</span> <span class="k">SELECT</span> <span class="s1">&#39;A&#39;</span><span class="p">;</span>
+        <span class="k">WHEN</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">80</span> <span class="k">THEN</span> <span class="k">SELECT</span> <span class="s1">&#39;B&#39;</span><span class="p">;</span>
+        <span class="k">WHEN</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">60</span> <span class="k">THEN</span> <span class="k">SELECT</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
+        <span class="k">ELSE</span> <span class="k">SELECT</span> <span class="s1">&#39;D&#39;</span><span class="p">;</span>
+        <span class="n">END</span> <span class="k">CASE</span><span class="p">;</span>
+    <span class="n">END</span>
+    
+	<span class="c1"># 调用
+</span><span class="c1"></span>	<span class="k">CALL</span> <span class="nf">test_case</span><span class="p">(</span><span class="mi">87</span><span class="p">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="3-if-结构">3、IF 结构</h3>
+
+<p>功能：实现多重分支</p>
+
+<p>语法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">IF</span> <span class="err">条件</span><span class="mi">1</span> <span class="k">THEN</span> <span class="err">语句</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">ELSEIF</span> <span class="err">条件</span><span class="mi">2</span> <span class="k">THEN</span> <span class="err">语句</span><span class="mi">2</span><span class="p">;</span>
+<span class="err">……</span>
+<span class="p">[</span><span class="k">ELSE</span> <span class="err">语句</span><span class="n">N</span><span class="p">;]</span>
+<span class="n">END</span> <span class="k">IF</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>应用：只能应用在BEGIN……END中</p>
+
+<h4 id="案例-1">案例</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1"># 根据传入的成绩，来显示等级，比如传入的成绩：90-100返回A，80-90返回B，60-80返回C，否则返回D
+</span><span class="c1"></span>    <span class="k">CREATE</span> <span class="n">DEFINER</span><span class="o">=`</span><span class="n">root</span><span class="o">`@`</span><span class="n">localhost</span><span class="o">`</span> <span class="n">FUNCTION</span> <span class="o">`</span><span class="n">test_if</span><span class="o">`</span><span class="p">(</span><span class="n">score</span> <span class="kt">INT</span><span class="p">)</span> <span class="n">RETURNS</span> <span class="kt">char</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="kp">CHARSET</span> <span class="n">utf8</span>
+    <span class="n">BEGIN</span>
+        <span class="k">IF</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span> <span class="k">AND</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">100</span> <span class="k">THEN</span> <span class="k">RETURN</span> <span class="s1">&#39;A&#39;</span><span class="p">;</span>
+        <span class="k">ELSEIF</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">80</span> <span class="k">THEN</span> <span class="k">RETURN</span> <span class="s1">&#39;B&#39;</span><span class="p">;</span>
+        <span class="k">ELSEIF</span> <span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">60</span> <span class="k">THEN</span> <span class="k">RETURN</span> <span class="s1">&#39;C&#39;</span><span class="p">;</span>
+        <span class="k">ELSE</span> <span class="k">RETURN</span> <span class="s1">&#39;D&#39;</span><span class="p">;</span>
+        <span class="n">END</span> <span class="k">IF</span><span class="p">;</span>
+    <span class="n">END</span>
+    
+    <span class="c1"># 调用
+</span><span class="c1"></span>    <span class="k">SELECT</span> <span class="nf">test_if</span><span class="p">(</span><span class="mi">86</span><span class="p">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="二-循环结构">二、循环结构</h2>
+
+<p>只能放在BEGIN END中。</p>
+
+<h3 id="分类">分类</h3>
+
+<p>WHILE、LOOP、REPEAT</p>
+
+<p>循环控制：</p>
+
+<p>ITERATE：类似于CONTINUE，继续，结束当次循环，继续下一次</p>
+
+<p>LEAVE：类似于BREAK，跳出，结束当前所在的 循环</p>
+
+<h4 id="1-while">1、WHILE</h4>
+
+<p>语法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="p">[</span><span class="err">名称</span><span class="p">:]</span><span class="k">WHILE</span> <span class="err">循环条件</span> <span class="n">DO</span>			<span class="c1">#[名称]可选
+</span><span class="c1"></span>	<span class="err">循环体</span><span class="p">;</span>
+<span class="n">END</span> <span class="k">WHILE</span> <span class="p">[</span><span class="err">名称</span><span class="p">];</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>先判断再执行，有可能执行0次。</p>
+
+<h4 id="2-loop">2、LOOP</h4>
+
+<p>语法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="p">[</span><span class="err">名称</span><span class="p">:]</span><span class="k">LOOP</span>
+	<span class="err">循环体</span><span class="p">;</span>
+<span class="n">END</span> <span class="k">LOOP</span> <span class="p">[</span><span class="err">名称</span><span class="p">];</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>可以用来模拟简单的死循环。</p>
+
+<h4 id="3-repeat">3、REPEAT</h4>
+
+<p>语法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="p">[</span><span class="err">名称</span><span class="p">:]</span><span class="k">REPEAT</span>
+	<span class="err">循环体</span><span class="p">;</span>
+<span class="n">UNTIL</span> <span class="err">结束循环的条件</span>
+<span class="n">END</span> <span class="k">REPEAT</span> <span class="p">[</span><span class="err">名称</span><span class="p">];</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>先执行，再判断，至少执行一次。</p>
+
+<h3 id="案例-2">案例</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -558,94 +665,130 @@ SET SESSION tx_isolation = &lsquo;read-committed&rsquo;;</p>
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span></pre></td>
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">#方式一：通过SET 或 SEECT 
-    # SET @用户变量名 = 值;
-    # SET @用户变量名 := 值
-    # SELECT @用户变量名 := 值;
-    # 案例：
-        SET @name = &#39;john&#39;;
-        SET @name = 100;
-# 方式二：通过 SELECT INTO
-    /*
-        SELECT 字段 INTO @变量名
-        FROM 表;
-    */
-    # 案例：
-        SET @count = 1;
-        SELECT COUNT(*) INTO @count
-        FROM employees;</pre></td></tr></table>
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="c1"># 1、没有添加循环控制语句
+</span><span class="c1"></span>	<span class="c1"># 批量插入，根据次数插入到admin表中多条记录
+</span><span class="c1"></span>    <span class="k">CREATE</span> <span class="nf">pro_while1</span><span class="p">(</span><span class="k">IN</span> <span class="n">insertCount</span> <span class="kt">INT</span><span class="p">)</span>
+    <span class="n">BEGIN</span>
+        <span class="k">DECLARE</span> <span class="n">i</span> <span class="kt">INT</span> <span class="k">DEFAULT</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">WHILE</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">insertCount</span> <span class="n">DO</span>
+            <span class="k">INSERT</span> <span class="k">INTO</span> <span class="nf">admin</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="o">`</span><span class="n">password</span><span class="o">`</span><span class="p">)</span>
+            <span class="k">VALUES</span><span class="p">(</span><span class="nf">CONCAT</span><span class="p">(</span><span class="s1">&#39;Rose&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="s1">&#39;666&#39;</span><span class="p">);</span>
+            <span class="kt">SET</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">END</span> <span class="k">WHILE</span><span class="p">;</span>
+    <span class="n">END</span>
+    
+    <span class="c1"># 调用
+</span><span class="c1"></span>    <span class="k">CALL</span> <span class="nf">pro_while1</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+    
+<span class="c1"># 2、添加LEAVE子句
+</span><span class="c1"></span>	<span class="c1"># 批量插入，根据次数插入到admin表中多条记录，如果次数&gt;20则停止
+</span><span class="c1"></span>    <span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="nf">test_while1</span><span class="p">(</span><span class="k">IN</span> <span class="n">insertCount</span> <span class="kt">INT</span><span class="p">)</span>
+    <span class="n">BEGIN</span>
+        <span class="k">DECLARE</span> <span class="n">i</span> <span class="kt">INT</span> <span class="k">DEFAULT</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">a</span><span class="p">:</span><span class="k">WHILE</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">insertCount</span> <span class="n">DO</span>
+            <span class="k">INSERT</span> <span class="k">INTO</span> <span class="nf">admin</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="o">`</span><span class="n">password</span><span class="o">`</span><span class="p">)</span>
+            <span class="k">VALUES</span><span class="p">(</span><span class="nf">CONCAT</span><span class="p">(</span><span class="s1">&#39;xiaohua&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="s1">&#39;0000&#39;</span><span class="p">);</span>
+            <span class="k">IF</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">20</span> <span class="k">THEN</span> <span class="k">LEAVE</span> <span class="n">a</span><span class="p">;</span>
+            <span class="n">END</span> <span class="k">IF</span><span class="p">;</span>
+            <span class="kt">SET</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">END</span> <span class="k">WHILE</span> <span class="n">a</span><span class="p">;</span>
+    <span class="n">END</span>
+    
+    <span class="c1"># 调用
+</span><span class="c1"></span>    <span class="k">CALL</span> <span class="nf">test_while1</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+    
+<span class="c1"># 3、添加ITERATE语句
+</span><span class="c1"></span>	<span class="c1"># 批量插入，根据次数插入到admin表中多条记录，只插入偶数次
+</span><span class="c1"></span>    <span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="nf">test_while2</span><span class="p">(</span><span class="k">IN</span> <span class="n">insertCount</span> <span class="kt">INT</span><span class="p">)</span>
+    <span class="n">BEGIN</span>
+        <span class="k">DECLARE</span> <span class="n">i</span> <span class="kt">INT</span> <span class="k">DEFAULT</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">b</span><span class="p">:</span><span class="k">WHILE</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">insertCount</span> <span class="n">DO</span>
+        	<span class="kt">SET</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        	<span class="k">IF</span> <span class="k">MOD</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">THEN</span> <span class="k">ITERATE</span> <span class="n">b</span><span class="p">;</span>
+        	<span class="n">END</span> <span class="k">IF</span><span class="p">;</span>
+            <span class="k">INSERT</span> <span class="k">INTO</span> <span class="nf">admin</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="o">`</span><span class="n">password</span><span class="o">`</span><span class="p">)</span>
+            <span class="k">VALUES</span><span class="p">(</span><span class="nf">CONCAT</span><span class="p">(</span><span class="s1">&#39;xiaohua&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span> <span class="s1">&#39;0000&#39;</span><span class="p">);</span>            
+        <span class="n">END</span> <span class="k">WHILE</span> <span class="n">b</span><span class="p">;</span>
+    <span class="n">END</span>
+    
+    <span class="c1"># 调用
+</span><span class="c1"></span>    <span class="k">CALL</span> <span class="nf">test_while2</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span></code></pre></td></tr></table>
 </div>
 </div>
-<h1 id="③使用-查看用户变量的值">③使用（查看用户变量的值）</h1>
+<h3 id="总结">总结</h3>
+
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>语法</th>
+<th>特点</th>
+<th>位置</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>WHILE</td>
+<td>Lable:WHILE loop_condition<br />DO loop_list<br />END WHILE label;</td>
+<td>先判断后执行</td>
+<td>BEGIN END中</td>
+</tr>
+
+<tr>
+<td>REPEAT</td>
+<td>Lable:REPEAT<br />loop_list<br />UNTIL end_condition<br />END REPEAT lable;</td>
+<td>先执行后判断</td>
+<td>BEGIN END中</td>
+</tr>
+
+<tr>
+<td>LOOP</td>
+<td>Lable:LOOP<br />loop_list<br />END LOOP label;</td>
+<td>没有条件的死循环</td>
+<td>BEGIN END中</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="三-流程控制经典案例">三、流程控制经典案例</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma"># SELECT @用户变量名;
-# 案例:
-    SELECT @count;</pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">### ②局部变量</pre></td></tr></table>
-</div>
-</div>
-<p>mysql
-/*
-    作用域：仅仅在定义它的BEGIN …… END中有效
-    应用在 BEGIN……END中，且只能是第一句话！！！！
-*/</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"></pre></td>
-<td class="lntd">
-<pre class="chroma"></pre></td></tr></table>
-</div>
-</div>
-<p>mysql</p>
-
-<h1 id="①-声明">① 声明</h1>
-
-<p>DECLARE 变量名 类型；
-DECLARE 变量名 类型 DEFAULT 值；</p>
-
-<h1 id="②赋值">②赋值</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma"># 方式1：通过SET 或 SELECT 
-    SET 局部变量名 = 值;
-    SET 局部变量名 := 值;
-    SELECT @局部变量名 := 值;
-# 方式2：通 SELECT INTO
-    SELECT 字段 INTO 局部变量名
-    FROM 表;</pre></td></tr></table>
-</div>
-</div>
-<h1 id="③使用">③使用</h1>
-
-<p>SELECT 局部变量名;</p>
-
-<h1 id="案例-声明2个变量并赋初始值-求和-并打印">案例:声明2个变量并赋初始值，求和，并打印</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -656,52 +799,67 @@ DECLARE 变量名 类型 DEFAULT 值；</p>
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span></pre></td>
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"># 1、用户变量
-    SET @m := 1;
-    SET @n := 2;
-    SET @sum := @m + @n;
-    SELECT @sum;
-# 2、局部变量(报错，需放在BEGIN……END中)
-    DECLARE m INT DAFAULT 1;
-    DECLARE n INT DEFAULT 2;
-    DECLARE sum INT;
-    SET sum = m + n;
-    SELECT sum;</pre></td></tr></table>
+<pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="cm">/* 一、已知表stringcontent
+</span><span class="cm">	其中字段：
+</span><span class="cm">	id 自增长
+</span><span class="cm">	content VARCHAR(20)
+</span><span class="cm">	
+</span><span class="cm">	要求向该表插入指定个数的，随机的字符串
+</span><span class="cm">*/</span>
+
+    <span class="k">USE</span> <span class="o">`</span><span class="n">girls</span><span class="o">`</span><span class="p">;</span>
+    <span class="k">DROP</span> <span class="k">procedure</span> <span class="k">IF</span> <span class="k">EXISTS</span> <span class="o">`</span><span class="n">test_randstr_insert</span><span class="o">`</span><span class="p">;</span>
+
+    <span class="n">DELIMITER</span> <span class="err">$$</span>
+    <span class="k">USE</span> <span class="o">`</span><span class="n">girls</span><span class="o">`</span><span class="err">$$</span>
+    <span class="k">CREATE</span> <span class="k">PROCEDURE</span> <span class="o">`</span><span class="n">test_randstr_insert</span><span class="o">`</span><span class="p">(</span><span class="k">IN</span> <span class="n">insertCount</span> <span class="kt">INT</span><span class="p">)</span>
+    <span class="n">BEGIN</span>
+        <span class="k">DECLARE</span> <span class="n">i</span> <span class="kt">INT</span> <span class="k">DEFAULT</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">DECLARE</span> <span class="n">str</span> <span class="kt">VARCHAR</span><span class="p">(</span><span class="mi">26</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="s1">&#39;abcdefghijklmnopqrstuvwxyz&#39;</span><span class="p">;</span>
+        <span class="k">DECLARE</span> <span class="n">startIndex</span> <span class="kt">INT</span> <span class="k">DEFAULT</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">DECLARE</span> <span class="n">len</span> <span class="kt">INT</span> <span class="k">DEFAULT</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">WHILE</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">insertCount</span> <span class="n">DO</span>
+            <span class="kt">SET</span> <span class="n">startIndex</span> <span class="o">=</span> <span class="nf">FLOOR</span><span class="p">(</span><span class="nf">RAND</span><span class="p">()</span><span class="o">*</span><span class="mi">26</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+            <span class="kt">SET</span> <span class="n">len</span> <span class="o">=</span> <span class="nf">FLOOR</span><span class="p">(</span><span class="nf">RAND</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="mi">20</span><span class="o">-</span><span class="n">startIndex</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+
+            <span class="k">INSERT</span> <span class="k">INTO</span> <span class="nf">stringcontent</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+            <span class="k">VALUES</span> <span class="p">(</span><span class="nf">SUBSTR</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="n">startIndex</span><span class="p">,</span> <span class="n">len</span><span class="p">));</span>
+
+            <span class="kt">SET</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">END</span> <span class="k">WHILE</span><span class="p">;</span>
+    <span class="n">END</span><span class="err">$$</span>
+
+    <span class="n">DELIMITER</span> <span class="p">;</span>
+
+    <span class="k">CALL</span> <span class="nf">test_randstr_insert</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+    <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">stringcontent</span><span class="p">;</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>```</p>
-
-<p>对比用户变量和局部变量：</p>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th>作用域</th>
-<th>定义和使用的位置</th>
-<th>语法</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>用户变量</td>
-<td>当前会话</td>
-<td>会话中的任何地方</td>
-<td>必须加上@符号；不用限定类型</td>
-</tr>
-
-<tr>
-<td>局部变量</td>
-<td>BEGIN……END中</td>
-<td>只能在BEGIN……END中，且为第一句话</td>
-<td>一般不用加@符号；需要限定类型</td>
-</tr>
-</tbody>
-</table>
-
     </div>
 
     
@@ -714,7 +872,7 @@ DECLARE 变量名 类型 DEFAULT 值；</p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-      2019-11-02
+      2019-11-03
       
     </span>
   </p>
@@ -756,7 +914,7 @@ DECLARE 变量名 类型 DEFAULT 值；</p>
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/mysql_notes_09/">
+          <a class="prev" href="/post/mysql_easy_practice/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -766,12 +924,12 @@ DECLARE 变量名 类型 DEFAULT 值；</p>
 </svg>
 
             </i>
-            <span class="prev-text nav-default">MySQL笔记-09存储过程和函数</span>
+            <span class="prev-text nav-default">Mysql经典入门练习题</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         
-          <a class="next" href="/post/mysql_notes_07/">
-            <span class="next-text nav-default">MySQL笔记-07视图</span>
+          <a class="next" href="/post/mysql_notes_09/">
+            <span class="next-text nav-default">MySQL笔记-09存储过程和函数</span>
             <span class="prev-text nav-mobile">下一篇</span>
             
             <i class="iconfont">
@@ -809,7 +967,7 @@ DECLARE 变量名 类型 DEFAULT 值；</p>
   <div id="disqus_thread"></div>
   <script type="text/javascript">
     var disqus_config = function () {
-      this.page.url = "http://yulingqiu.github.io/post/mysql_notes_08/";
+      this.page.url = "http://yulingqiu.github.io/post/mysql_notes_10/";
     };
     function load_disqus() {
       

@@ -5,10 +5,28 @@
     <link>http://yulingqiu.github.io/post/</link>
     <description>Recent content in Posts on 栖迟于一丘</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 02 Nov 2019 13:57:57 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 Nov 2019 16:20:19 +0800</lastBuildDate>
     
 	<atom:link href="http://yulingqiu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mysql经典入门练习题</title>
+      <link>http://yulingqiu.github.io/post/mysql_easy_practice/</link>
+      <pubDate>Mon, 04 Nov 2019 16:20:19 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_easy_practice/</guid>
+      <description>在网上找了些SQL练习题做，但是网上很多题目和答案要么比较老旧了，要么不适用于MySQL，要么代码风格不好，所以我进行了适当修改加工。现在将</description>
+    </item>
+    
+    <item>
+      <title>MySQ笔记-10流程控制结构</title>
+      <link>http://yulingqiu.github.io/post/mysql_notes_10/</link>
+      <pubDate>Sun, 03 Nov 2019 10:08:25 +0800</pubDate>
+      
+      <guid>http://yulingqiu.github.io/post/mysql_notes_10/</guid>
+      <description>流程控制结构分为： 顺序结构：程序从上往下依次执行 分支结构：程序从两条或多条路径中选择一条去执行 循环结构：程序在满足一定条件的基础上，重复执行</description>
+    </item>
     
     <item>
       <title>MySQL笔记-09存储过程和函数</title>
@@ -16,7 +34,7 @@
       <pubDate>Sat, 02 Nov 2019 13:57:57 +0800</pubDate>
       
       <guid>http://yulingqiu.github.io/post/mysql_notes_09/</guid>
-      <description>存储过程和函数：类似于Java中的方法 好处： 提高代码的重用性 简化操作 提高效率：减少编译次数；减少和数据库服务器的连接次数 存储过程（需要在命令</description>
+      <description>存储过程和函数：类似于Java中的方法 好处： 提高代码的重用性 简化操作 提高效率：减少编译次数；减少和数据库服务器的连接次数 存储过程 含义：一组预</description>
     </item>
     
     <item>
@@ -25,7 +43,7 @@
       <pubDate>Sat, 02 Nov 2019 13:57:16 +0800</pubDate>
       
       <guid>http://yulingqiu.github.io/post/mysql_notes_08/</guid>
-      <description>变量分为： 系统变量 全局变量（global） 会话变量（session） 自定义变量 用户变量 局部变量 1、系统变量 说明：系统变量由系统提供，不是由用</description>
+      <description>变量分为： 系统变量：服务器层面上的，必须拥有super权限才能为系统变量赋值 全局变量（global） 会话变量（session） 自定义变量 用户</description>
     </item>
     
     <item>
